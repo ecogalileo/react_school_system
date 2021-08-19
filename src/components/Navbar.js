@@ -8,7 +8,7 @@ export const Navbar = ({ toggle }) => {
     relative shadow-sm font-mono bg-blue-100'
       role='navigation'
     >
-      <Link to='/' className='pl-8 text-5xl'>
+      <Link to='/' className='pl-8 text-3xl'>
         LOREM IPSUM SCHOOL
       </Link>
       <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
