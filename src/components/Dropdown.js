@@ -15,7 +15,7 @@ const Dropdown = ({ isOpen, toggle }) => {
         Home
       </Link>
       <Link className='p-4' to='/menu'>
-        Menu
+        Events
       </Link>
       <Link className='p-4' to='/about'>
         About

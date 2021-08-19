@@ -32,7 +32,7 @@ export const Navbar = ({ toggle }) => {
           Home
         </Link>
         <Link className='text-3xl p-4' to='/menu'>
-          Menu
+          Events
         </Link>
         <Link className='text-3xl p-4' to='/about'>
           About
