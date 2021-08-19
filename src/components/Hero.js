@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className='bg-gray-500 h-screen flex flex-col justify-center items-center'>
-      <h1 className='lg:text-9xl md:text-7xl sm:text-5xl text-3xl font-black mb-14'>
-        LOREM IPSUM
-      </h1>
-      <Link className='py-6 px-10 bg-blue-400 rounded-full text-3xl hover:bg-blue-700 transition duration-300 ease-in-out flex items-center animate-bounce'>
+    <div className='bg-gray-500 h-screen flex flex-col justify-center items-center mb-8'>
+      <h1 className='text-5xl font-black mb-14'>LOREM IPSUM</h1>
+      <Link className=' md:py-6 sm:py-6 py-6 md:px-10 sm:px-10 px-10 bg-blue-400 rounded-full sm:text-3xl hover:bg-blue-700 transition duration-300 ease-in-out flex items-center animate-bounce'>
         Enroll Now
         {/* <svg
           class='w-6 h-6 ml-4'

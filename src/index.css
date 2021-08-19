@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .menu-card {
-  @apply flex flex-col justify-center items-center bg-white h-screen font-mono py-40;
+  @apply flex flex-col justify-center items-center bg-white md:min-h-full font-mono container mx-auto mt-8;
 }
 
 .center-content {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center p-8;
 }

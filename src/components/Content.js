@@ -14,7 +14,7 @@ const Content = () => {
         ></img>
         <div className='center-content'>
           <h2 className='text-2xl mb-2'>School Library</h2>
-          <p className='container mx-auto mb-2'>
+          <p className='mb-2'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -35,7 +35,7 @@ const Content = () => {
         ></img>
         <div className='center-content'>
           <h2 className='text-2xl mb-2'>Graduation</h2>
-          <p className='container mx-auto mb-2'>
+          <p className='mb-2'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
