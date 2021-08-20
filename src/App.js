@@ -10,6 +10,7 @@ import About from "./pages/about";
 import Menu from "./pages/menu";
 import Dropdown from "./components/Dropdown";
 import contact from "./pages/contact";
+import login from "./pages/login";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +42,7 @@ function App() {
         <Route path='/menu' exact component={Menu} />
         <Route path='/about' exact component={About} />
         <Route path='/contact' exact component={contact} />
-        <Route path='/' exact component={Home} />
+        <Route path='/login' exact component={login} />
       </Switch>
       <Footer />
     </>
