@@ -9,6 +9,7 @@ import { Switch, Route } from "react-router-dom";
 import About from "./pages/about";
 import Menu from "./pages/menu";
 import Dropdown from "./components/Dropdown";
+import contact from "./pages/contact";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,6 +40,7 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/menu' exact component={Menu} />
         <Route path='/about' exact component={About} />
+        <Route path='/contact' exact component={contact} />
       </Switch>
       <Footer />
     </>

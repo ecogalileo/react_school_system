@@ -6,15 +6,15 @@ const Content = () => {
   return (
     <>
       <div className='menu-card'>
-        <h1 className='text-5xl mb-8'>Contents</h1>
+        <h1 className='text-7xl mb-8'>Features</h1>
         <img
           src={ImageOne}
           alt='graduation of students'
-          className='h-full rounded mb-20 shadow'
+          className='h-full rounded mb-1 shadow'
         ></img>
         <div className='center-content'>
-          <h2 className='text-2xl mb-2'>School Library</h2>
-          <p className='mb-2'>
+          <h2 className='text-4xl mb-2'>School Library</h2>
+          <p className='mb-20'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -31,11 +31,11 @@ const Content = () => {
         <img
           src={ImageTwo}
           alt='graduation of students'
-          className='h-full rounded mb-20 shadow'
+          className='h-full rounded shadow'
         ></img>
         <div className='center-content'>
-          <h2 className='text-2xl mb-2'>Graduation</h2>
-          <p className='mb-2'>
+          <h2 className='text-4xl mb-2'>Graduation</h2>
+          <p className='mb-20'>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

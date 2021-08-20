@@ -5,10 +5,10 @@ export const Navbar = ({ toggle }) => {
   return (
     <nav
       className='flex justify-between items-center h-16 bg-white text-black
-    relative shadow-sm font-mono bg-blue-100'
+    relative shadow-sm font-mono bg-gradient-to-r from-black via-gray-900 to-gray-400'
       role='navigation'
     >
-      <Link to='/' className='pl-8 text-3xl'>
+      <Link to='/' className='md:pl-8 text-3xl text-white'>
         LOREM IPSUM SCHOOL
       </Link>
       <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
@@ -27,7 +27,7 @@ export const Navbar = ({ toggle }) => {
           />
         </svg>
       </div>
-      <div className='pr-8 md:block hidden'>
+      <div className='pr-8 text-white md:block hidden'>
         <Link className='text-3xl p-4' to='/'>
           Home
         </Link>
