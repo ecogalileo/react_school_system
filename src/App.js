@@ -41,6 +41,7 @@ function App() {
         <Route path='/menu' exact component={Menu} />
         <Route path='/about' exact component={About} />
         <Route path='/contact' exact component={contact} />
+        <Route path='/' exact component={Home} />
       </Switch>
       <Footer />
     </>
