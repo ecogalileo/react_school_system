@@ -44,7 +44,7 @@ export const Navbar = ({ toggle }) => {
           Contact
         </Link>
         <Link to='/login' className='text-3xl p-4'>
-          <button class='md:bg-transparent transform hover:scale-110 motion-reduce:transform-none'>
+          <button className='md:bg-transparent transform hover:scale-110 motion-reduce:transform-none'>
             <svg
               className='w-10 h-10'
               fill='currentColor'

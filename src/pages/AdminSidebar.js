@@ -1,22 +1,20 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
-const AdminSidebar = ({ btn, sidebar }) => {
+const AdminSidebar = () => {
   return (
     <div className='relative md:flex'>
       {/* <!-- mobile menu bar --> */}
       <div className='bg-gray-800 text-gray-100 flex justify-between md:hidden'>
         {/* <!-- logo --> */}
-        <Link to='/AdminSidebar' className='block p-4 text-white font-bold'>
+        <Link to='/DashBoard' className='block p-4 text-white font-bold'>
           Lorem School
         </Link>
         {/* <!-- mobile menu button --> */}
-        <button
-          className='mobile-menu-button p-4 focus:outline-none focus:bg-gray-700'
-          onClick={btn}
-        >
+        <button className='mobile-menu-button p-4 focus:outline-none focus:bg-gray-700'>
           <svg
-            class='h-5 w-5'
+            className='h-5 w-5'
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -33,7 +31,7 @@ const AdminSidebar = ({ btn, sidebar }) => {
       </div>
 
       {/* <!-- sidebar --> */}
-      <div className='sidebar bg-blue-800 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out'>
+      <div className='min-h-screen sidebar bg-blue-800 text-blue-100 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out'>
         {/* <!-- logo --> */}
         <Link
           to='/DashBoard'
@@ -41,7 +39,7 @@ const AdminSidebar = ({ btn, sidebar }) => {
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            class='h-8 w-8'
+            className='h-8 w-8'
             viewBox='0 0 20 20'
             fill='currentColor'
           >
