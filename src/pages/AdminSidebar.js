@@ -80,6 +80,13 @@ const AdminSidebar = ({ btn, sidebar }) => {
           >
             Events
           </Link>
+          <hr className='border-1 mt-8'></hr>
+          <Link
+            to='/login'
+            className='block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white'
+          >
+            Logout
+          </Link>
         </nav>
       </div>
     </div>
