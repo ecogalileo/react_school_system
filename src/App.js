@@ -11,6 +11,8 @@ import Menu from "./pages/menu";
 import Dropdown from "./components/Dropdown";
 import contact from "./pages/contact";
 import login from "./pages/login";
+import DashBoard from "./pages/AdminDashboard";
+import AdminSidebar from "./pages/AdminSidebar";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +35,7 @@ function App() {
       window.addEventListener("resize", hideMenu);
     };
   });
+
   return (
     <>
       <Navbar toggle={toggle} />
@@ -43,6 +46,8 @@ function App() {
         <Route path='/about' exact component={About} />
         <Route path='/contact' exact component={contact} />
         <Route path='/login' exact component={login} />
+        <Route path='/DashBoard' exact component={DashBoard} />
+        <Route path='/AdminSidebar' exact component={AdminSidebar} />
       </Switch>
       <Footer />
     </>
