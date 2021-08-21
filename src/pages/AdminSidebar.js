@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AdminSidebar = ({ btn, sidebar }) => {
   return (
-    <div className='relative min-h-screen md:flex'>
+    <div className='relative md:flex'>
       {/* <!-- mobile menu bar --> */}
       <div className='bg-gray-800 text-gray-100 flex justify-between md:hidden'>
         {/* <!-- logo --> */}

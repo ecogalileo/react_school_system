@@ -9,7 +9,7 @@ const DashBoard = () => {
       {/* <!-- content --> */}
       <div className='md:flex md:flex-1 p-10 text-2xl font-bold'>
         {/* cardbox */}
-        <div class='md:w-full md:w-1/2 xl:w-1/3 p-6'>
+        <div class='md:w-full md:w-1/2 xl:w-1/3 p-6 px-4'>
           <div class='bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5'>
             <div class='flex flex-row items-center'>
               <div class='flex-shrink pr-4'>
@@ -31,7 +31,7 @@ const DashBoard = () => {
           {/* end of the cardbox */}
         </div>
         {/* cardbox */}
-        <div class='md:w-full md:w-1/2 xl:w-1/3 p-6'>
+        <div class='md:w-full md:w-1/2 xl:w-1/3 p-6 px-4'>
           <div class='bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5'>
             <div class='flex flex-row items-center'>
               <div class='flex-shrink pr-4'>
@@ -53,7 +53,7 @@ const DashBoard = () => {
           {/*end of the cardbox */}
         </div>
         {/* cardbox */}
-        <div class='md:w-full md:w-1/2 xl:w-1/3 p-6'>
+        <div class='md:w-full md:w-1/2 xl:w-1/3 p-6 px-4'>
           <div
             class='
     bg-gradient-to-b
