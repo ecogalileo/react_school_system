@@ -9,6 +9,9 @@ const login = () => {
       <div class='min-h-screen bg-gray-200 flex items-center'>
         <div class='container mx-auto max-w-md shadow-md hover:shadow-lg transition duration-300'>
           <div class='py-12 p-10 bg-white rounded-xl'>
+            <div class='flex justify-center mb-4'>
+              <i class='far fa-user-circle text-8xl'></i>
+            </div>
             <div class='mb-6'>
               <label
                 class='mr-4 pl-2 text-gray-700 font-bold inline-block mb-2'

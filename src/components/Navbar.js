@@ -31,20 +31,20 @@ export const Navbar = ({ toggle }) => {
         </svg>
       </div>
       <div className='pr-8 text-black md:block hidden'>
-        <Link className='text-3xl p-4' to='/'>
-          Home
+        <Link className='text-3xl p-4 hover:text-gray-100' to='/'>
+          <i class='fas fa-home'></i> Home
         </Link>
-        <Link className='text-3xl p-4' to='/menu'>
+        <Link className='text-3xl p-4 hover:text-gray-100' to='/menu'>
           Events
         </Link>
-        <Link className='text-3xl p-4' to='/about'>
+        <Link className='text-3xl p-4 hover:text-gray-100' to='/about'>
           About
         </Link>
-        <Link className='text-3xl p-4' to='/contact'>
+        <Link className='text-3xl p-4 hover:text-gray-100' to='/contact'>
           Contact
         </Link>
         <Link to='/login' className='text-3xl p-4'>
-          <button className='md:bg-transparent transform hover:scale-110 motion-reduce:transform-none'>
+          <button className='md:bg-transparent transform hover:text-gray-100 hover:scale-125 motion-reduce:transform-none'>
             <svg
               className='w-10 h-10'
               fill='currentColor'
