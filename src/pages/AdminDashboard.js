@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import AdminSidebar from "./adminSidebar";
+import AdminSidebar from "./AdminSidebar";
 
 const AdminDashboard = () => {
   return (

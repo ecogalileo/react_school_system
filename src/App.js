@@ -12,7 +12,7 @@ import Menu from "./pages/menu";
 import contact from "./pages/contact";
 import login from "./pages/login";
 import AdminDashboard from "./pages/AdminDashboard";
-import AdminSidebar from "./pages/adminSidebar";
+import AdminSidebar from "./pages/AdminSidebar";
 import StudentTable from "./pages/studentTable";
 import teacherTable from "./pages/teacherTable";
 
