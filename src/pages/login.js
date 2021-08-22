@@ -41,7 +41,7 @@ const login = () => {
             <Link className='text-sm text-gray-700 inline-block mt-4 hover:text-indigo-600 hover:underline transition duration-200'>
               Forgot password
             </Link>
-            <Link to='/dashboard'>
+            <Link to='/AdminDashboard'>
               <button class='w-full mt-6 text-indigo-50 font-bold bg-indigo-600 py-3 rounded-md hover:bg-indigo-500 transition duration-300'>
                 LOGIN
               </button>

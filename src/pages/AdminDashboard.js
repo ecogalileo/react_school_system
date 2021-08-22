@@ -2,7 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import AdminSidebar from "./adminSidebar";
 
-const DashBoard = () => {
+const AdminDashboard = () => {
   return (
     <>
       <div className='relative min-h-screen md:flex'>
@@ -91,4 +91,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default AdminDashboard;

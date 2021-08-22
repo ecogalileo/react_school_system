@@ -54,7 +54,7 @@ const AdminSidebar = () => {
         {/* <!-- nav --> */}
         <nav>
           <Link
-            to='/DashBoard'
+            to='/AdminDashboard'
             className='block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white'
           >
             Dashboard
