@@ -11,8 +11,10 @@ import Menu from "./pages/menu";
 // import Dropdown from "./components/Dropdown";
 import contact from "./pages/contact";
 import login from "./pages/login";
-import DashBoard from "./pages/AdminDashboard";
-import AdminSidebar from "./pages/AdminSidebar";
+import DashBoard from "./pages/adminDashboard";
+import AdminSidebar from "./pages/adminSidebar";
+import StudentTable from "./pages/studentTable";
+import teacherTable from "./pages/teacherTable";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path='/login' exact component={login} />
         <Route path='/DashBoard' exact component={DashBoard} />
         <Route path='/AdminSidebar' exact component={AdminSidebar} />
+        <Route path='/StudentTable' exact component={StudentTable} />
+        <Route path='/teacherTable' exact component={teacherTable} />
       </Switch>
     </>
   );

@@ -1,10 +1,9 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 const AdminSidebar = () => {
   return (
-    <div className='relative md:flex'>
+    <>
       {/* <!-- mobile menu bar --> */}
       <div className='bg-gray-800 text-gray-100 flex justify-between md:hidden'>
         {/* <!-- logo --> */}
@@ -61,13 +60,13 @@ const AdminSidebar = () => {
             Dashboard
           </Link>
           <Link
-            to='/AdminSidebar'
+            to='/StudentTable'
             className='block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white'
           >
             Students
           </Link>
           <Link
-            to='/AdminSidebar'
+            to='/teacherTable'
             className='block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white'
           >
             Teachers
@@ -87,7 +86,7 @@ const AdminSidebar = () => {
           </Link>
         </nav>
       </div>
-    </div>
+    </>
   );
 };
 
