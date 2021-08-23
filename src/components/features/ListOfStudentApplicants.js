@@ -6,7 +6,7 @@ const listOfStudents = localStorage.getItem('studentData')? JSON.parse(localStor
 const ListOfStudentApplicants = () => {
     return (
         <div className="container m-auto bg-gray-300 my-6">
-            <h1 className='px-4 text-2xl font-semibold text-green-700'>Student Applicants</h1>
+            <h1 className='px-4 text-2xl font-semibold text-green-700 pt-3'>Student Applicants</h1>
             <div className='border-t mt-3'>
                 {listOfStudents.map((applicant) => 
                 <div className='pt-3'>
