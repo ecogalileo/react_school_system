@@ -9,30 +9,44 @@ import { Switch, Route } from 'react-router-dom';
 import About from './pages/about';
 import Menu from './pages/menu';
 // import Dropdown from "./components/Dropdown";
-import contact from "./pages/contact";
-import login from "./pages/login";
-import AdminDashboard from "./pages/AdminDashboard";
-import AdminSidebar from "./pages/AdminSidebar";
-import StudentTable from "./pages/studentTable";
-import teacherTable from "./pages/teacherTable";
-import RegistrationPage from "./components/features/RegistrationPage";
-import ListOfStudentApplicants from "./components/features/ListOfStudentApplicants";
+import contact from './pages/contact';
+import login from './pages/login';
+import AdminDashboard from './pages/AdminDashboard';
+import AdminSidebar from './pages/AdminSidebar';
+
+import AddStudent from './components/Students/AddStudent';
+import EditStudent from './components/Students/EditStudent';
+import Student from './components/Students/Student';
+import Students from './components/Students/Students';
+
+import teacherTable from './pages/teacherTable';
+import RegistrationPage from './components/features/RegistrationPage';
+import ListOfStudentApplicants from './components/features/ListOfStudentApplicants';
 
 function App() {
   return (
     <>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/menu' exact component={Menu} />
-        <Route path='/about' exact component={About} />
-        <Route path='/contact' exact component={contact} />
-        <Route path='/login' exact component={login} />
-        <Route path='/AdminDashboard' exact component={AdminDashboard} />
-        <Route path='/AdminSidebar' exact component={AdminSidebar} />
-        <Route path='/StudentTable' exact component={StudentTable} />
-        <Route path='/teacherTable' exact component={teacherTable} />
-        <Route path='/RegistrationPage' exact component={RegistrationPage}/>
-        <Route path='/ListOfStudentApplicants' exact component={ListOfStudentApplicants}/>
+        <Route path="/" exact component={Home} />
+        <Route path="/menu" exact component={Menu} />
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={contact} />
+        <Route path="/login" exact component={login} />
+        <Route path="/AdminDashboard" exact component={AdminDashboard} />
+        <Route path="/AdminSidebar" exact component={AdminSidebar} />
+
+        <Route path="/students" exact component={Students} />
+        <Route path="/students/add" exact component={AddStudent} />
+        <Route path="/students/edit/:id" exact component={EditStudent} />
+        <Route path="/students/:id" exact component={Student} />
+
+        <Route path="/teacherTable" exact component={teacherTable} />
+        <Route path="/RegistrationPage" exact component={RegistrationPage} />
+        <Route
+          path="/ListOfStudentApplicants"
+          exact
+          component={ListOfStudentApplicants}
+        />
       </Switch>
     </>
   );
