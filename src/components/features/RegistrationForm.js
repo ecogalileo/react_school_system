@@ -197,8 +197,8 @@ const RegistrationForm = () => {
                     <input className='p-1 rounded-md' type='text' placeholder='+630000000000' {...register('mobileNumber', {required: 'This is required', pattern: /((^(\+)(\d){12}$)|(^\d{11}$))/ })}/>{errors.mobileNumber && <p className='text-xs pl-1 text-red-500'>{errors.mobileNumber.message}</p>}
                 </div>
                 <div className='flex flex-col w-full'>
-                    <label className='m-1'>Phone NUmber <span className='text-gray-600'>(Optional)</span></label>
-                    <input className='p-1 rounded-md' type='text' placeholder='(00) 0000 0000'></input>
+                    <label className='m-1'>Phone Number <span className='text-gray-600'>(Optional)</span></label>
+                    <input className='p-1 rounded-md' type='text' placeholder='(00) 0000 0000' {...register('phoneNumber')}/>
                 </div>
             </div>
             {/* More Information */}
@@ -220,7 +220,7 @@ const RegistrationForm = () => {
                 {/* Birth Certificate */}
                 <div className='flex flex-col w-full'>
                     <label className='mt-2'>Scanned Birth Certificate</label>
-                    <input className='rounded-md' type='file' placeholder='(00) 0000 0000' {...register('birthcrtificate', {required: 'This is required for verification'})}/>{errors.birthcrtificate && <p className='text-xs pl-1 text-red-500'>{errors.birthcrtificate.message}</p>}
+                    <input className='rounded-md' type='file' placeholder='(00) 0000 0000' {...register('birthCertificate', {required: 'This is required for verification'})}/>{errors.birthCertificate && <p className='text-xs pl-1 text-red-500'>{errors.birthCertificate.message}</p>}
                 </div>
             </div>
             {/* Buttons */}
