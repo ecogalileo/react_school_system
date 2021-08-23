@@ -13,8 +13,12 @@ import contact from "./pages/contact";
 import login from "./pages/login";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminSidebar from "./pages/AdminSidebar";
+<<<<<<< HEAD
 import StudentTable from "./pages/studentTable";
 import teacherTable from "./pages/teacherTable";
+=======
+import RegistrationPage from "./components/features/RegistrationPage";
+>>>>>>> jbranch
 
 function App() {
   return (
@@ -27,8 +31,12 @@ function App() {
         <Route path='/login' exact component={login} />
         <Route path='/AdminDashboard' exact component={AdminDashboard} />
         <Route path='/AdminSidebar' exact component={AdminSidebar} />
+<<<<<<< HEAD
         <Route path='/StudentTable' exact component={StudentTable} />
         <Route path='/teacherTable' exact component={teacherTable} />
+=======
+        <Route path='/RegistrationPage' exact component={RegistrationPage}/>
+>>>>>>> jbranch
       </Switch>
     </>
   );

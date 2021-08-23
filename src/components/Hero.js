@@ -7,7 +7,7 @@ const Hero = () => {
       <h1 className='lg:text-8xl md:text-6xl sm:text-3xl text-3xl font-black mb-14'>
         LOREM IPSUM
       </h1>
-      <Link className=' md:py-6 sm:py-6 py-6 md:px-10 sm:px-10 px-10 bg-blue-400 rounded-full sm:text-3xl hover:bg-blue-700 transition duration-300 ease-in-out flex items-center animate-bounce'>
+      <Link className=' md:py-6 sm:py-6 py-6 md:px-10 sm:px-10 px-10 bg-blue-400 rounded-full sm:text-3xl hover:bg-blue-700 transition duration-300 ease-in-out flex items-center animate-bounce' to='/RegistrationPage'>
         Enroll Now
         {/* <svg
           class='w-6 h-6 ml-4'
