@@ -13,6 +13,7 @@ import contact from "./pages/contact";
 import login from "./pages/login";
 import DashBoard from "./pages/AdminDashboard";
 import AdminSidebar from "./pages/AdminSidebar";
+import RegistrationPage from "./components/features/RegistrationPage";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,7 @@ function App() {
         <Route path='/login' exact component={login} />
         <Route path='/DashBoard' exact component={DashBoard} />
         <Route path='/AdminSidebar' exact component={AdminSidebar} />
+        <Route path='/RegistrationPage' exact component={RegistrationPage}/>
       </Switch>
       <Footer />
     </>
