@@ -30,7 +30,7 @@ function App() {
         <Route path='/AdminSidebar' exact component={AdminSidebar} />
         <Route path='/StudentTable' exact component={StudentTable} />
         <Route path='/teacherTable' exact component={teacherTable} />
-        <Route path='/RegistrationPage' exact component={RegistrationPage}/>
+        <Route path='/RegistrationPage' exact component={RegistrationPage} />
       </Switch>
     </>
   );
