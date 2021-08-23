@@ -1,11 +1,12 @@
-import React from 'react'
-import { useState, Component, useEffect } from 'react'
-import {useForm} from 'react-hook-form'
-import { Redirect } from 'react-router-dom'
-import RegistrationOutput from './RegistrationOutput'
+import React from "react";
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+// import { Redirect } from 'react-router-dom'
+// import RegistrationOutput from './RegistrationOutput'
 
-
-const retrieveData = localStorage.getItem('studentData')? JSON.parse(localStorage.getItem('studentData')) : [];
+const retrieveData = localStorage.getItem("studentData")
+  ? JSON.parse(localStorage.getItem("studentData"))
+  : [];
 
 const RegistrationForm = () => {
     const [data, setData] = useState();
@@ -231,10 +232,10 @@ const RegistrationForm = () => {
                 {/* <div className=''>
                     <button className=' bg-gray-600 text-white py-1 px-4 w-full rounded-md'>Clear Fields</button>
                 </div> */}
-            </div>
-            </form>
         </div>
-    )
-}
+      </form>
+    </div>
+  );
+};
 
-export default RegistrationForm
+export default RegistrationForm;

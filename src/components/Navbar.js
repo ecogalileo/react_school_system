@@ -4,15 +4,21 @@ import { Link } from "react-router-dom";
 export const Navbar = ({ toggle }) => {
   return (
     <nav
-      className='flex justify-between items-center h-16 bg-white text-black
-    relative shadow-sm font-mono bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400'
+      className='flex justify-between items-center h-20 bg-white text-yellow-500
+      relative shadow-sm font-mono bg-gradient-to-r from-green-900 via-green-600 to-green-400'
       role='navigation'
     >
       <Link
         to='/'
         className='lg:pl-8 md:pl-6 sm:pl-4 lg-text-6xl md-text-4xl sm-text-3xl text-2xl text-black'
       >
-        LOREM IPSUM SCHOOL
+        <img
+          src={
+            "https://www.feu.edu.ph/wp-content/themes/feu_theme2019/assets/images/logo_white2.png"
+          }
+          alt='Logo'
+          className='h-full rounded mb-1 shadow'
+        ></img>
       </Link>
       <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>
         <svg
@@ -31,20 +37,20 @@ export const Navbar = ({ toggle }) => {
         </svg>
       </div>
       <div className='pr-8 text-black md:block hidden'>
-        <Link className='text-3xl p-4 hover:text-gray-100' to='/'>
+        <Link className='text-3xl p-4 hover:text-yellow-400' to='/'>
           <i class='fas fa-home'></i> Home
         </Link>
-        <Link className='text-3xl p-4 hover:text-gray-100' to='/menu'>
+        <Link className='text-3xl p-4 hover:text-yellow-400' to='/menu'>
           Events
         </Link>
-        <Link className='text-3xl p-4 hover:text-gray-100' to='/about'>
+        <Link className='text-3xl p-4 hover:text-yellow-400' to='/about'>
           About
         </Link>
-        <Link className='text-3xl p-4 hover:text-gray-100' to='/contact'>
+        <Link className='text-3xl p-4 hover:text-yellow-400' to='/contact'>
           Contact
         </Link>
-        <Link to='/login' className='text-3xl p-4'>
-          <button className='md:bg-transparent transform hover:text-gray-100 hover:scale-125 motion-reduce:transform-none'>
+        <Link onClick={() => window.open("./login")} className='text-3xl p-4'>
+          <button className='md:bg-transparent transform hover:text-yellow-400 hover:scale-125 motion-reduce:transform-none'>
             <svg
               className='w-10 h-10'
               fill='currentColor'
