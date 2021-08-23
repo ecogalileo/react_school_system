@@ -2,28 +2,9 @@
 import React from 'react';
 import AdminSidebar from './AdminSidebar';
 
-const pendingStudents = [
-  {
-    teacher_name: 'Genesis Gabiola',
-    teacher_department: 'Information Technology (IT)',
-    major: 'Web Development',
-    teacher_address: 'example',
-    teacher_email: 'Genesis@example.com',
-    image:
-      'https://images.unsplash.com/photo-1547320935-59b5a4f2cd1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-  },
-
-  {
-    teacher_name: 'Justine Micarandayo',
-    teacher_department: 'Information Technology (IT)',
-    major: 'Software Development',
-    teacher_address: 'example',
-    teacher_email: 'Justine@example.com',
-    image:
-      'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-  },
-  // More pending students...
-];
+// const pendingStudents = [
+//   // More pending students...
+// ];
 
 export default function pendingStudentsTable() {
   return (
