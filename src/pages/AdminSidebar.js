@@ -77,14 +77,12 @@ const AdminSidebar = () => {
           >
             Events
           </Link>
-          <hr className='border-1'></hr>
           <Link
             to='/ListOfStudentApplicants'
             className='block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white'
           >
             Pending
-          </Link>
-          <hr className="border-1"></hr>     
+          </Link>     
           <Link
             to="/login"
             className="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white"
