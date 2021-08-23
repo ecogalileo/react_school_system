@@ -1,13 +1,13 @@
 // import React, { useState, useEffect } from "react";
-import "./App.css";
+import './App.css';
 // import Footer from "./components/Footer";
 // import Content from "./components/Content";
 // import Hero from "./components/Hero";
 // import Navbar from "./components/Navbar";
-import Home from "./pages";
-import { Switch, Route } from "react-router-dom";
-import About from "./pages/about";
-import Menu from "./pages/menu";
+import Home from './pages';
+import { Switch, Route } from 'react-router-dom';
+import About from './pages/about';
+import Menu from './pages/menu';
 // import Dropdown from "./components/Dropdown";
 import contact from "./pages/contact";
 import login from "./pages/login";

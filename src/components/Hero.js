@@ -1,14 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import bg_image from "../images/bg_image.jpg";
 
 const Hero = () => {
   return (
     <div
       className='bg-fixed bg-no-repeat bg-cover bg-center h-screen flex flex-col justify-center items-center mb-8'
-      style={{
-        backgroundImage:
-          'url("https://www.feu.edu.ph/wp-content/uploads/2019/06/SOCMED_Card.jpg")',
-      }}
+      style={{ backgroundImage: `url(${bg_image})` }}
     >
       <h1 className='lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black mb-14'>
         LOREM IPSUM
