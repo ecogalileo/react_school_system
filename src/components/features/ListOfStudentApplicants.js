@@ -1,12 +1,17 @@
 import React from 'react'
+import AdminSidebar from '../../pages/AdminSidebar';
+
 
 
 const listOfStudents = localStorage.getItem('studentData')? JSON.parse(localStorage.getItem('studentData')) : [];
 
 const ListOfStudentApplicants = () => {
     return (
-        <div className="container m-auto bg-gray-300 my-6">
-            <h1 className='px-4 text-2xl font-semibold text-green-700 pt-3'>Student Applicants</h1>
+        <>
+        <div className='relative md:flex'>
+        <AdminSidebar/>
+        <div className="m-auto bg-gray-300 my-6 flex-1">
+            <h1 className='px-4 text-2xl font-semibold text-green-700 pt-3'>Pending Student Applicants</h1>
             <div className='border-t mt-3'>
                 {listOfStudents.map((applicant) => 
                 <div className='pt-3'>
@@ -66,6 +71,11 @@ const ListOfStudentApplicants = () => {
                         </label>
                         <p className='mt-1 text-md text-gray-900 sm:mt-0 sm:col-span-2'>{applicant.gradeLevel}</p>
                     </div>
+                    <div className='px-4 bg-gray-100 text-center sm:text-left'>
+                        <button className=' bg-blue-800 hover:bg-blue-600 text-white py-1 px-4 my-3 rounded-md mx-2'>Accept</button>
+                        <button className=' bg-red-800 hover:bg-red-600 text-white py-1 px-4 my-3 rounded-md mx-2'>Verify</button>
+                    </div>
+                    
                     {/* <div className='flex'>
                         <label className='pr-4'>
                             Birth Certificate
@@ -77,6 +87,8 @@ const ListOfStudentApplicants = () => {
                 )}  
             </div>
         </div>
+        </div>
+        </>
     )
 }
 

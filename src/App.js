@@ -16,6 +16,7 @@ import AdminSidebar from "./pages/AdminSidebar";
 import StudentTable from "./pages/studentTable";
 import teacherTable from "./pages/teacherTable";
 import RegistrationPage from "./components/features/RegistrationPage";
+import ListOfStudentApplicants from "./components/features/ListOfStudentApplicants";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/StudentTable' exact component={StudentTable} />
         <Route path='/teacherTable' exact component={teacherTable} />
         <Route path='/RegistrationPage' exact component={RegistrationPage}/>
+        <Route path='/ListOfStudentApplicants' exact component={ListOfStudentApplicants}/>
       </Switch>
     </>
   );
