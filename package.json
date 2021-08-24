@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "json-server": "json-server -p 3006 -w src/data/db.json",
+    "json-server": "json-server --watch db.json --port 3003",
     "dev": "concurrently \"npm start\" \"npm run json-server\"",
     "build": "craco build",
     "test": "craco test",
