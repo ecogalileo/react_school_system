@@ -30,7 +30,7 @@ export default function Teachers() {
         <div class="flex-1 p-10 text-2xl font-bold">
           <div className="flex flex-row-reverse">
             <Link
-              class="bg-blue-600 hover:bg-blue-800 rounded-md p-2 mb-8"
+              class="bg-blue-600 hover:bg-blue-800 rounded-md px-4 py-2 mb-8 text-white"
               to="/teachers/add"
             >
               Add teachers

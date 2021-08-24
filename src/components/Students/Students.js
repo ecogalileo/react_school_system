@@ -29,7 +29,7 @@ const Students = () => {
         <div class="flex-1 p-10 text-2xl font-bold">
           <div className="flex flex-row-reverse">
             <Link
-              class="bg-blue-600 text-white hover:bg-blue-800 rounded-md p-2 mb-8"
+              class="bg-blue-600 text-white hover:bg-blue-800 rounded-md p-2 mb-8 px-4 py-2"
               to="/students/add"
             >
               Add Student
