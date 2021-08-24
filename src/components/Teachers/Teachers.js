@@ -1,31 +1,26 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React from 'react';
-import AdminSidebar from './AdminSidebar';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import AdminSidebar from '../../pages/AdminSidebar';
+import { Link } from 'react-router-dom';
 
-const teacher = [
-  {
-    teacher_name: 'Genesis Gabiola',
-    teacher_department: 'Information Technology (IT)',
-    major: 'Web Development',
-    teacher_address: 'example',
-    teacher_email: 'Genesis@example.com',
-    image:
-      'https://images.unsplash.com/photo-1547320935-59b5a4f2cd1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-  },
+export default function Teachers() {
+  const [teachers, setTeacher] = useState([]);
 
-  {
-    teacher_name: 'Justine Micarandayo',
-    teacher_department: 'Information Technology (IT)',
-    major: 'Software Development',
-    teacher_address: 'example',
-    teacher_email: 'Justine@example.com',
-    image:
-      'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-  },
-  // More teacher...
-];
+  useEffect(() => {
+    loadTeachers();
+  }, []);
 
-export default function teacherTable() {
+  const loadTeachers = async () => {
+    const result = await axios.get('http://localhost:3003/teachers');
+    setTeacher(result.data.reverse());
+  };
+
+  const removeTeacher = async id => {
+    await axios.delete(`http://localhost:3003/teachers/${id}`);
+    loadTeachers();
+  };
+
   return (
     <>
       {/* Sidebar div start */}
@@ -34,10 +29,12 @@ export default function teacherTable() {
         {/* Content Start */}
         <div class="flex-1 p-10 text-2xl font-bold">
           <div className="flex flex-row-reverse">
-            {' '}
-            <button class="bg-blue-600 hover:bg-blue-800 rounded-md p-2 mb-8">
+            <Link
+              class="bg-blue-600 hover:bg-blue-800 rounded-md p-2 mb-8"
+              to="/teachers/add"
+            >
               Add teachers
-            </button>
+            </Link>
           </div>
 
           <div className="relative flex flex-col">
@@ -48,6 +45,12 @@ export default function teacherTable() {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          #
+                        </th>
                         <th
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -64,7 +67,7 @@ export default function teacherTable() {
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
-                          Status
+                          Email
                         </th>
                         <th
                           scope="col"
@@ -78,56 +81,55 @@ export default function teacherTable() {
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                      {teacher.map(person => (
-                        <tr key={person.teacher_email}>
+                      {teachers.map((teacher, idx) => (
+                        <tr key={teacher.teacher_email}>
+                          <th scope="row">{idx + 1}</th>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
                               <div className="flex-shrink-0 h-10 w-10">
                                 <img
                                   className="h-10 w-10 rounded-full"
-                                  src={person.image}
+                                  src={teacher.image}
                                   alt=""
                                 />
                               </div>
                               <div className="ml-4">
                                 <div className="text-sm font-medium text-gray-900">
-                                  {person.teacher_name}
+                                  {teacher.name}
                                 </div>
                                 <div className="text-sm text-gray-500">
-                                  {person.teacher_email}
+                                  {teacher.email}
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm text-gray-900">
-                              {person.teacher_department}
+                              {teacher.department}
                             </div>
-                            <div className="text-sm text-gray-500">
-                              {person.major}
-                            </div>
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                              Active
-                            </span>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            {person.teacher_address}
+                            {teacher.address}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-white">
-                            <button
-                              type="button"
+                            <Link
+                              className="bg-blue-600 hover:bg-blue-700 rounded-md mr-4 p-2"
+                              to={`/teachers/${teacher.id}`}
+                            >
+                              <i class="fas fa-eye"></i> View
+                            </Link>
+                            <Link
                               className="bg-blue-600 hover:bg-blue-800 rounded-md mr-4 p-2"
+                              to={`/teachers/edit/${teacher.id}`}
                             >
                               <i class="fas fa-edit"></i> Edit
-                            </button>
-                            <button
-                              type="button"
+                            </Link>
+                            <Link
                               className="bg-red-600 hover:bg-red-800 rounded-md p-2"
+                              onClick={removeTeacher(teacher.id)}
                             >
                               <i class="far fa-trash-alt"></i> Delete
-                            </button>
+                            </Link>
                           </td>
                         </tr>
                       ))}
