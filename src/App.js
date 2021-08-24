@@ -25,6 +25,7 @@ import Teacher from './components/Teachers/Teacher';
 import Teachers from './components/Teachers/Teachers';
 
 import RegistrationPage from './components/features/RegistrationPage';
+import RegistrationModal from './components/features/RegistrationModal';
 import ListOfStudentApplicants from './components/features/ListOfStudentApplicants';
 
 function App() {
@@ -49,7 +50,8 @@ function App() {
         <Route exact path="/teachers/edit/:id" component={EditTeacher} />
         <Route exact path="/teachers/:id" component={Teacher} />
 
-        <Route exact path="/RegistrationPage" component={RegistrationPage} />
+        <Route exact path="/register" component={RegistrationPage} />
+        <Route exact path="/register/accept" component={RegistrationModal}/>
         <Route
           exact
           path="/ListOfStudentApplicants"

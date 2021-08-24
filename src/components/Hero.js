@@ -13,7 +13,7 @@ const Hero = () => {
       </h1>
       <Link
         className=' md:py-5 sm:py-5 py-5 md:px-8 sm:px-8 px-8 mt-2 bg-green-700 text-yellow-300 rounded-full md:text-4xl hover:bg-green-500 transition duration-300 ease-in-out flex items-center animate-bounce opacity-90'
-        to='/RegistrationPage'
+        to='/register'
       >
         Enroll Now
       </Link>

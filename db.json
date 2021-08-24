@@ -31,32 +31,15 @@
       "address": "asdasd",
       "image": "https://randomuser.me/api/portraits/men/51.jpg",
       "id": 4
+    },
+    {
+      "name": "John Cena",
+      "gradeLevel": "4",
+      "email": "adjha@gmail.com",
+      "address": "Ohio States",
+      "image": "https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.6435-9/186488324_2910688599202923_1355505087170525905_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGixkVIoo2LX5rG2U31zbqQNeyr7C47A0k17KvsLjsDSUKc29thqfbhYKpPOsJuJJ2ohRXzc2gbOHjN34Q0XJVe&_nc_ohc=b2YR7_7jly8AX_NP_hN&_nc_ht=scontent.fmnl17-3.fna&oh=84a703089725753fd4a1de634fc7f41e&oe=614954F9",
+      "id": 5
     }
   ],
-  "teachers": [
-    {
-      "name": "Genesis Gabiola",
-      "department": "Information Technology (IT)",
-      "email": "genesis@example.com",
-      "address": "Del Pilar, Camariner Norte",
-      "image": "https://images.unsplash.com/photo-1547320935-59b5a4f2cd1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
-      "id": 1
-    },
-    {
-      "name": "Justine Micarandayo",
-      "department": "Information Technology (IT)",
-      "email": "justine@example.com",
-      "address": "Don Ramon, Benguet",
-      "image": "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
-      "id": 2
-    },
-    {
-      "name": "Bruno Marcello",
-      "department": "Math",
-      "email": "bmarcello@xyz.com",
-      "address": "Dolores, Taguig",
-      "image": "https://randomuser.me/api/portraits/men/30.jpg",
-      "id": 3
-    }
-  ]
+  "teachers": []
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 // import { Redirect } from 'react-router-dom'
 // import RegistrationOutput from './RegistrationOutput'
 
@@ -438,14 +439,14 @@ const RegistrationForm = () => {
           </div>
         </div>
         {/* Buttons */}
-        <div className="flex-col md:flex-row px-7 flex pb-7 md:justify-center ">
+        <div className="flex-col md:flex-row px-7 flex pb-7 md:justify-center mt-5">
             <div className="md:w-3/12 md:mx-3">
-                <button className=" bg-gray-600 text-white py-1 px-4 w-full my-3 rounded-md">
+                <button className=" bg-blue-800 hover:bg-blue-600 text-white py-1 px-4 w-full my-3 rounded-md" >
                 Submit Application
                 </button>
             </div>
             <div className="md:w-3/12 md:mx-3">
-            <button className=" bg-gray-600 text-white py-1 px-4 w-full my-3 rounded-md" onClick={clear}>
+            <button className=" bg-red-800 hover:bg-red-600 text-white py-1 px-4 w-full my-3 rounded-md" onClick={clear}>
                 Clear</button>
             </div>
         </div>
