@@ -8,13 +8,13 @@ const EditStudent = () => {
 
   const [student, setStudent] = useState({
     name: '',
-    course: '',
+    gradeLevel: '',
     email: '',
     address: '',
     image: '',
   });
 
-  const { name, course, email, address, image } = student;
+  const { name, gradeLevel, email, address, image } = student;
   const onInputChange = e => {
     setStudent({ ...student, [e.target.name]: e.target.value });
   };
@@ -54,9 +54,9 @@ const EditStudent = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Course"
-              name="course"
-              value={course}
+              placeholder="Enter Your gradeLevel"
+              name="gradeLevel"
+              value={gradeLevel}
               onChange={e => onInputChange(e)}
             />
           </div>
