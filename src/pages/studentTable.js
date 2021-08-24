@@ -1,26 +1,26 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React from "react";
-import AdminSidebar from "./AdminSidebar";
+import React from 'react';
+import AdminSidebar from './AdminSidebar';
 
 const student = [
   {
-    name: "Kimberly Anne Galileo",
-    course: "Bachelor of Science Business Administration",
-    major: "Major in Financial Management",
-    Address: "Dagupan, Pangasinan",
-    email: "kimberlyanne@example.com",
+    name: 'Kimberly Anne Galileo',
+    course: 'Bachelor of Science Business Administration',
+    major: 'Major in Financial Management',
+    Address: 'Dagupan, Pangasinan',
+    email: 'kimberlyanne@example.com',
     image:
-      "https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.6435-9/186488324_2910688599202923_1355505087170525905_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGixkVIoo2LX5rG2U31zbqQNeyr7C47A0k17KvsLjsDSUKc29thqfbhYKpPOsJuJJ2ohRXzc2gbOHjN34Q0XJVe&_nc_ohc=b2YR7_7jly8AX_NP_hN&_nc_ht=scontent.fmnl17-3.fna&oh=84a703089725753fd4a1de634fc7f41e&oe=614954F9",
+      'https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.6435-9/186488324_2910688599202923_1355505087170525905_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGixkVIoo2LX5rG2U31zbqQNeyr7C47A0k17KvsLjsDSUKc29thqfbhYKpPOsJuJJ2ohRXzc2gbOHjN34Q0XJVe&_nc_ohc=b2YR7_7jly8AX_NP_hN&_nc_ht=scontent.fmnl17-3.fna&oh=84a703089725753fd4a1de634fc7f41e&oe=614954F9',
   },
 
   {
-    name: "Erick Armstrong Galileo",
-    course: "Bachelor of Science Information Technology",
-    major: "Major in Web Development",
-    Address: "Balungao, Pangasinan",
-    email: "ericogalileo@example.com",
+    name: 'Erick Armstrong Galileo',
+    course: 'Bachelor of Science Information Technology',
+    major: 'Major in Web Development',
+    Address: 'Balungao, Pangasinan',
+    email: 'ericogalileo@example.com',
     image:
-      "https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.6435-9/141159269_3742680895771114_283658765807445518_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEDnNatwihnejIEB2E5kNznSqi7B5u9vNxKqLsHm7283FDdBI5hiIv5g0JOf0O6hm4vBJj6BaGa-iDCXm7PGPQ0&_nc_ohc=G5xWrPv46hEAX_FTXu8&_nc_ht=scontent.fmnl17-2.fna&oh=b9a37d430fff7f0729701ef6a36a89a8&oe=61489E69",
+      'https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.6435-9/141159269_3742680895771114_283658765807445518_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEDnNatwihnejIEB2E5kNznSqi7B5u9vNxKqLsHm7283FDdBI5hiIv5g0JOf0O6hm4vBJj6BaGa-iDCXm7PGPQ0&_nc_ohc=G5xWrPv46hEAX_FTXu8&_nc_ht=scontent.fmnl17-2.fna&oh=b9a37d430fff7f0729701ef6a36a89a8&oe=61489E69',
   },
   // More student...
 ];
@@ -33,7 +33,7 @@ export default function StudentTable() {
         {/* Content Start */}
         <div class='flex-1 p-10 text-2xl font-bold'>
           <div className='flex flex-row-reverse'>
-            {" "}
+            {' '}
             <button class='bg-blue-600 hover:bg-blue-800 rounded-md p-2 mb-8'>
               Add Students
             </button>

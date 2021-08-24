@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navbar = ({ toggle }) => {
   return (
@@ -14,7 +14,7 @@ export const Navbar = ({ toggle }) => {
       >
         <img
           src={
-            "https://www.feu.edu.ph/wp-content/themes/feu_theme2019/assets/images/logo_white2.png"
+            'https://www.feu.edu.ph/wp-content/themes/feu_theme2019/assets/images/logo_white2.png'
           }
           alt='Logo'
           className='h-full rounded mb-1 shadow'
@@ -41,15 +41,15 @@ export const Navbar = ({ toggle }) => {
           <i class='fas fa-home'></i> Home
         </Link>
         <Link className='text-3xl p-4 hover:text-yellow-400' to='/menu'>
-          Events
+          <i class='far fa-calendar-alt'></i> Events
         </Link>
         <Link className='text-3xl p-4 hover:text-yellow-400' to='/about'>
-          About
+          <i class='fas fa-book-open'></i> About
         </Link>
         <Link className='text-3xl p-4 hover:text-yellow-400' to='/contact'>
-          Contact
+          <i class='fas fa-address-book'></i> Contact
         </Link>
-        <Link onClick={() => window.open("./login")} className='text-3xl p-4'>
+        <Link onClick={() => window.open('./login')} className='text-3xl p-4'>
           <button className='md:bg-transparent transform hover:text-yellow-400 hover:scale-125 motion-reduce:transform-none'>
             <svg
               className='w-10 h-10'

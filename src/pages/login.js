@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 // import HomeNavbar from "../components/HomeNavbar";
 
 const login = () => {
@@ -13,7 +13,7 @@ const login = () => {
               <Link to='/'>
                 <img
                   src={
-                    "https://www.feu.edu.ph/wp-content/themes/feu_theme2019/assets/images/logo_white2.png"
+                    'https://www.feu.edu.ph/wp-content/themes/feu_theme2019/assets/images/logo_white2.png'
                   }
                   alt='Logo'
                   className='h-full rounded mb-1 shadow'

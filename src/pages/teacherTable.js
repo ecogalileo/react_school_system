@@ -1,26 +1,26 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React from "react";
-import AdminSidebar from "./AdminSidebar";
+import React from 'react';
+import AdminSidebar from './AdminSidebar';
 
 const teacher = [
   {
-    teacher_name: "Genesis Gabiola",
-    teacher_department: "Information Technology (IT)",
-    major: "Web Development",
-    teacher_address: "example",
-    teacher_email: "Genesis@example.com",
+    teacher_name: 'Genesis Gabiola',
+    teacher_department: 'Information Technology (IT)',
+    major: 'Web Development',
+    teacher_address: 'example',
+    teacher_email: 'Genesis@example.com',
     image:
-      "https://images.unsplash.com/photo-1547320935-59b5a4f2cd1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+      'https://images.unsplash.com/photo-1547320935-59b5a4f2cd1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
   },
 
   {
-    teacher_name: "Justine Micarandayo",
-    teacher_department: "Information Technology (IT)",
-    major: "Software Development",
-    teacher_address: "example",
-    teacher_email: "Justine@example.com",
+    teacher_name: 'Justine Micarandayo',
+    teacher_department: 'Information Technology (IT)',
+    major: 'Software Development',
+    teacher_address: 'example',
+    teacher_email: 'Justine@example.com',
     image:
-      "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+      'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
   },
   // More teacher...
 ];
@@ -34,7 +34,7 @@ export default function teacherTable() {
         {/* Content Start */}
         <div class='flex-1 p-10 text-2xl font-bold'>
           <div className='flex flex-row-reverse'>
-            {" "}
+            {' '}
             <button class='bg-blue-600 hover:bg-blue-800 rounded-md p-2 mb-8'>
               Add teachers
             </button>
