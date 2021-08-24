@@ -14,18 +14,22 @@ const RegistrationForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }, reset
   } = useForm();
   const onSubmit = e => {
     setData(e);
     setallData([...allData, e]);
     console.log(e, data);
+    reset();
   };
+  const clear = () => {
+      reset();
+  }
   useEffect(() => {
     localStorage.setItem('studentData', JSON.stringify(allData));
   }, [allData]);
   return (
-    <div className="container m-auto bg-gray-300 my-6">
+    <div className="container m-auto bg-gray-300 my-6 md:w-7/12">
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* Header */}
         <div className="p-6">
@@ -36,13 +40,13 @@ const RegistrationForm = () => {
         </div>
         {/* Student's Name */}
         <label className="px-8 text-xl font-medium">Student Name</label>
-        <div className="flex px-7 flex-wrap mb-6">
-          <div className="flex flex-col w-6/12">
+        <div className="flex flex-row px-7 flex-wrap lg:flex-nowrap mb-6">
+          <div className="flex flex-col w-6/12 md:w-full md:pl-0">
             <label className="m-1">
               First Name <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="First Name"
               {...register('firstName', { required: 'This is required' })}
@@ -53,20 +57,20 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col pl-2 w-6/12">
+          <div className="flex flex-col pl-2 w-6/12 md:w-full md:pl-0 lg:pl-2">
             <label className="m-1">Middle Name</label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="Middle Name"
             ></input>
           </div>
-          <div className=" flex-col flex w-full">
+          <div className=" flex-col flex w-full lg:pl-2">
             <label className="m-1">
               Last Name <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="Last Name"
               {...register('lastName', { required: 'This is required' })}
@@ -78,15 +82,17 @@ const RegistrationForm = () => {
             )}
           </div>
         </div>
-        {/* Birth Date */}
-        <label className="px-8 text-xl font-medium ">Birth Date</label>
-        <div className="flex px-7 mb-6">
+        <div className="md:grid md:grid-cols-3 gap-2">
+                  {/* Birth Date */}
+        <div className="col-span-2">
+        <label className="px-7 text-xl font-medium ">Birth Date</label>
+        <div className="flex px-6 lg:px-0 lg:pl-7 mb-6 ">
           <div className="flex flex-col w-full">
             <label className="m-1">
               Month <span className="text-red-500">*</span>
             </label>
             <select
-              className="p-1 rounded-md text-sm"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               {...register('birthMonth', { required: 'Please select Month' })}
             >
               <option></option>
@@ -114,7 +120,7 @@ const RegistrationForm = () => {
               Day <span className="text-red-500">*</span>
             </label>
             <select
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               {...register('birthDay', { required: 'Please select Day' })}
             >
               <option></option>
@@ -161,7 +167,7 @@ const RegistrationForm = () => {
               Year <span className="text-red-500">*</span>
             </label>
             <select
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               {...register('birthYear', { required: 'Please select Year' })}
             >
               <option></option>
@@ -191,36 +197,41 @@ const RegistrationForm = () => {
             )}
           </div>
         </div>
+        </div>
         {/* Gender */}
-        <label className="px-8 text-xl font-medium ">Gender</label>
-        <div className="px-7 mb-6">
-          <div className="flex flex-col w-full">
-            <label className="m-1">Gender</label>
-            <select
-              className="p-1 rounded-md"
-              {...register('gender', { required: 'This is required' })}
-            >
-              <option></option>
-              <option>Male</option>
-              <option>Female</option>
-              <option>N/A</option>
-            </select>
-            {errors.gender && (
-              <p className="text-xs pl-1 text-red-500">
-                {errors.gender.message}
-              </p>
-            )}
-          </div>
+        <div className='col-span-1'>
+            <label className="px-8 md:pr-7 md:px-0 text-xl font-medium ">Gender</label>
+                <div className="px-7 md:pr-7 md:px-0 mb-6 ">
+                <div className="flex flex-col w-full">
+                    <label className="m-1">Gender <span className="text-red-500">*</span>
+            </label>
+                    <select
+                    className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
+                    {...register('gender', { required: 'This is required' })}
+                    >
+                    <option></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>N/A</option>
+                    </select>
+                    {errors.gender && (
+                    <p className="text-xs pl-1 text-red-500">
+                        {errors.gender.message}
+                    </p>
+                    )}
+                </div>
+                </div>
+            </div>
         </div>
         {/* Address */}
         <label className="px-8 text-xl font-medium ">Address</label>
-        <div className="flex-col px-7 mb-6">
+        <div className="flex flex-wrap px-7 mb-6 flex-row">
           <div className="flex flex-col w-full">
             <label className="m-1">
               Street Address <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="Street name, Barangray name"
               {...register('streetAddress', { required: 'This is required' })}
@@ -231,12 +242,12 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full lg:w-4/12">
             <label className="m-1">
               City <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="City Name"
               {...register('cityAddress', { required: 'This is required' })}
@@ -247,12 +258,12 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full lg:w-4/12 lg:pl-2">
             <label className="m-1">
               Province <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="Province Name"
               {...register('provinceAddress', { required: 'This is required' })}
@@ -263,12 +274,12 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full lg:w-4/12 lg:pl-2">
             <label className="m-1">
               Postal / Zip Code <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="City Postal / Zip Code"
               {...register('postalAddress', { required: 'This is required' })}
@@ -284,13 +295,13 @@ const RegistrationForm = () => {
         <label className="px-8 text-xl font-medium flex-wrap flex">
           Parent / Guardian Information
         </label>
-        <div className="flex px-7 flex-wrap mb-6">
-          <div className="flex flex-col w-6/12">
+        <div className="flex flex-row px-7 flex-wrap lg:flex-nowrap mb-6">
+          <div className="flex flex-col w-6/12 md:w-full md:pl-0">
             <label className="m-1">
               First Name <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="First Name"
               {...register('parentFirstName', { required: 'This is required' })}
@@ -301,20 +312,20 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col pl-2 w-6/12">
+          <div className="flex flex-col pl-2 w-6/12 md:w-full md:pl-0 lg:pl-2">
             <label className="m-1">Middle Name</label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="Middle Name"
             />
           </div>
-          <div className=" flex-col flex w-full">
+          <div className=" flex-col flex w-full lg:pl-2">
             <label className="m-1">
               Last Name <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="Last Name"
               {...register('parentLastName', { required: 'This is required' })}
@@ -330,13 +341,13 @@ const RegistrationForm = () => {
         <label className="px-8 text-xl font-medium flex-wrap flex">
           Contact Information
         </label>
-        <div className="flex-col px-7 mb-6">
-          <div className="flex flex-col w-full">
+        <div className="flex flex-col lg:flex-row px-7 mb-6">
+          <div className="flex flex-col w-full lg:w-4/12">
             <label className="m-1">
               Email Address <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="email"
               placeholder="parent@company.com"
               {...register('email', {
@@ -350,12 +361,12 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full lg:w-4/12 lg:pl-2">
             <label className="m-1">
               Mobile Number <span className="text-red-500">*</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="+630000000000"
               {...register('mobileNumber', {
@@ -369,12 +380,12 @@ const RegistrationForm = () => {
               </p>
             )}
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full lg:w-4/12 lg:pl-2">
             <label className="m-1">
               Phone Number <span className="text-gray-600">(Optional)</span>
             </label>
             <input
-              className="p-1 rounded-md"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="text"
               placeholder="(00) 0000 0000"
               {...register('phoneNumber')}
@@ -382,16 +393,16 @@ const RegistrationForm = () => {
           </div>
         </div>
         {/* More Information */}
-        <label className="px-8 text-xl font-medium flex-wrap flex">
+        <label className="px-8 text-xl font-medium">
           More Information
         </label>
-        <div className="flex-col px-7">
-          <div className="flex flex-col w-full">
+        <div className="px-7 grid md:grid-cols-2">
+          <div className="flex flex-col w-full md:w-8/12">
             <label className="m-1">
               Grade Level <span className="text-red-500">*</span>
             </label>
             <select
-              className="p-1 rounded-md text-sm"
+              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300 text-sm"
               {...register('gradeLevel', { required: 'This is required' })}
             >
               <option></option>
@@ -412,7 +423,7 @@ const RegistrationForm = () => {
           <div className="flex flex-col w-full">
             <label className="mt-2">Scanned Birth Certificate</label>
             <input
-              className="rounded-md"
+              className="rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
               type="file"
               placeholder="(00) 0000 0000"
               {...register('birthCertificate', {
@@ -427,15 +438,16 @@ const RegistrationForm = () => {
           </div>
         </div>
         {/* Buttons */}
-        <div className="flex-col px-7 flex pb-7">
-          <div className="">
-            <button className=" bg-gray-600 text-white py-1 px-4 w-full my-3 rounded-md">
-              Submit Application
-            </button>
-          </div>
-          {/* <div className=''>
-                    <button className=' bg-gray-600 text-white py-1 px-4 w-full rounded-md'>Clear Fields</button>
-                </div> */}
+        <div className="flex-col md:flex-row px-7 flex pb-7 md:justify-center ">
+            <div className="md:w-3/12 md:mx-3">
+                <button className=" bg-gray-600 text-white py-1 px-4 w-full my-3 rounded-md">
+                Submit Application
+                </button>
+            </div>
+            <div className="md:w-3/12 md:mx-3">
+            <button className=" bg-gray-600 text-white py-1 px-4 w-full my-3 rounded-md" onClick={clear}>
+                Clear</button>
+            </div>
         </div>
       </form>
     </div>
