@@ -6,7 +6,6 @@ const Student = () => {
   const [student, setStudent] = useState({
     name: '',
     course: '',
-    major: '',
     email: '',
     address: '',
     image: '',
