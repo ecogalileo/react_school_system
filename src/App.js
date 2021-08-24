@@ -27,24 +27,24 @@ function App() {
   return (
     <>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/menu" exact component={Menu} />
-        <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={contact} />
-        <Route path="/login" exact component={login} />
-        <Route path="/AdminDashboard" exact component={AdminDashboard} />
-        <Route path="/AdminSidebar" exact component={AdminSidebar} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/menu" component={Menu} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={contact} />
+        <Route exact path="/login" component={login} />
+        <Route exact path="/AdminDashboard" component={AdminDashboard} />
+        <Route exact path="/AdminSidebar" component={AdminSidebar} />
 
-        <Route path="/students" exact component={Students} />
-        <Route path="/students/add" exact component={AddStudent} />
-        <Route path="/students/edit/:id" exact component={EditStudent} />
-        <Route path="/students/:id" exact component={Student} />
+        <Route exact path="/students" component={Students} />
+        <Route exact path="/students/add" component={AddStudent} />
+        <Route exact path="/students/edit/:id" component={EditStudent} />
+        <Route exact path="/students/:id" component={Student} />
 
-        <Route path="/teacherTable" exact component={teacherTable} />
-        <Route path="/RegistrationPage" exact component={RegistrationPage} />
+        <Route exact path="/teacherTable" component={teacherTable} />
+        <Route exact path="/RegistrationPage" component={RegistrationPage} />
         <Route
-          path="/ListOfStudentApplicants"
           exact
+          path="/ListOfStudentApplicants"
           component={ListOfStudentApplicants}
         />
       </Switch>

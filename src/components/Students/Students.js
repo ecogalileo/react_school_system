@@ -27,7 +27,7 @@ import { Link } from 'react-router-dom';
 //   // More student...
 // ];
 
-export default function Students() {
+const Students = () => {
   const [students, setStudent] = useState([]);
 
   useEffect(() => {
@@ -35,9 +35,8 @@ export default function Students() {
   }, []);
 
   const loadStudents = async () => {
-    console.log('Data loaded');
-    const result = await axios.get('http://localhost:3003/students');
-    setStudent(result.data.reverse());
+    const response = await axios.get('http://localhost:3003/students');
+    setStudent(response.data.reverse());
   };
 
   const removeStudent = async id => {
@@ -52,7 +51,6 @@ export default function Students() {
         {/* Content Start */}
         <div class="flex-1 p-10 text-2xl font-bold">
           <div className="flex flex-row-reverse">
-            {' '}
             <Link
               class="bg-blue-600 text-white hover:bg-blue-800 rounded-md p-2 mb-8"
               to="/students/add"
@@ -106,7 +104,7 @@ export default function Students() {
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       {students.map((student, idx) => (
-                        <tr key={student.email}>
+                        <tr key={student.id}>
                           <th scope="row">{idx + 1}</th>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
@@ -148,16 +146,14 @@ export default function Students() {
                               <i class="fas fa-eye"></i> View
                             </Link>
                             <Link
-                              type="button"
                               className="bg-yellow-600 hover:bg-yellow-700 rounded-md mr-4 p-2"
                               to={`/students/edit/${student.id}`}
                             >
                               <i class="fas fa-edit"></i> Edit
                             </Link>
                             <Link
-                              type="button"
                               className="bg-red-600 hover:bg-red-700 rounded-md p-2"
-                              onClick={removeStudent(student.id)}
+                              onClick={() => removeStudent(student.id)}
                             >
                               <i class="far fa-trash-alt"></i> Delete
                             </Link>
@@ -176,4 +172,6 @@ export default function Students() {
       </div>
     </>
   );
-}
+};
+
+export default Students;
