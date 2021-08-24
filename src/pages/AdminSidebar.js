@@ -7,7 +7,7 @@ const AdminSidebar = () => {
       {/* <!-- mobile menu bar --> */}
       <div className="bg-gray-800 text-gray-100 flex justify-between md:hidden">
         {/* <!-- logo --> */}
-        <Link to="/DashBoard" className="block p-4 text-white font-bold">
+        <Link to="/AdminDashboard" className="block p-4 text-white font-bold">
           Lorem School
         </Link>
         {/* <!-- mobile menu button --> */}

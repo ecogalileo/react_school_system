@@ -1,6 +1,6 @@
-import React from "react";
-import ImageOne from "../images/sample1.jfif";
-import ImageTwo from "../images/sample2.jfif";
+import React from 'react';
+import ImageOne from '../images/sample1.jfif';
+import ImageTwo from '../images/sample2.jfif';
 
 const Content = () => {
   return (
