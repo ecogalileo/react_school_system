@@ -4,30 +4,7 @@ import axios from 'axios';
 import AdminSidebar from '../../pages/AdminSidebar';
 import { Link } from 'react-router-dom';
 
-// const students = [
-//   {
-//     name: 'Kimberly Anne Galileo',
-//     course: 'Bachelor of Science Business Administration',
-//     major: 'Major in Financial Management',
-//     Address: 'Dagupan, Pangasinan',
-//     email: 'kimberlyanne@example.com',
-//     image:
-//       'https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.6435-9/186488324_2910688599202923_1355505087170525905_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGixkVIoo2LX5rG2U31zbqQNeyr7C47A0k17KvsLjsDSUKc29thqfbhYKpPOsJuJJ2ohRXzc2gbOHjN34Q0XJVe&_nc_ohc=b2YR7_7jly8AX_NP_hN&_nc_ht=scontent.fmnl17-3.fna&oh=84a703089725753fd4a1de634fc7f41e&oe=614954F9',
-//   },
-
-//   {
-//     name: 'Erick Armstrong Galileo',
-//     course: 'Bachelor of Science Information Technology',
-//     major: 'Major in Web Development',
-//     Address: 'Balungao, Pangasinan',
-//     email: 'ericogalileo@example.com',
-//     image:
-//       'https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.6435-9/141159269_3742680895771114_283658765807445518_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEDnNatwihnejIEB2E5kNznSqi7B5u9vNxKqLsHm7283FDdBI5hiIv5g0JOf0O6hm4vBJj6BaGa-iDCXm7PGPQ0&_nc_ohc=G5xWrPv46hEAX_FTXu8&_nc_ht=scontent.fmnl17-2.fna&oh=b9a37d430fff7f0729701ef6a36a89a8&oe=61489E69',
-//   },
-//   // More student...
-// ];
-
-export default function Students() {
+const Students = () => {
   const [students, setStudent] = useState([]);
 
   useEffect(() => {
@@ -35,9 +12,8 @@ export default function Students() {
   }, []);
 
   const loadStudents = async () => {
-    console.log('Data loaded');
-    const result = await axios.get('http://localhost:3003/students');
-    setStudent(result.data.reverse());
+    const response = await axios.get('http://localhost:3003/students');
+    setStudent(response.data.reverse());
   };
 
   const removeStudent = async id => {
@@ -52,7 +28,6 @@ export default function Students() {
         {/* Content Start */}
         <div class="flex-1 p-10 text-2xl font-bold">
           <div className="flex flex-row-reverse">
-            {' '}
             <Link
               class="bg-blue-600 text-white hover:bg-blue-800 rounded-md p-2 mb-8"
               to="/students/add"
@@ -91,7 +66,7 @@ export default function Students() {
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
-                          Status
+                          Email
                         </th>
                         <th
                           scope="col"
@@ -106,7 +81,7 @@ export default function Students() {
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       {students.map((student, idx) => (
-                        <tr key={student.email}>
+                        <tr key={student.id}>
                           <th scope="row">{idx + 1}</th>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
@@ -132,13 +107,8 @@ export default function Students() {
                               {student.course}
                             </div>
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap">
-                            <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                              Active
-                            </span>
-                          </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            {student.Address}
+                            {student.address}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-white">
                             <Link
@@ -148,16 +118,14 @@ export default function Students() {
                               <i class="fas fa-eye"></i> View
                             </Link>
                             <Link
-                              type="button"
                               className="bg-yellow-600 hover:bg-yellow-700 rounded-md mr-4 p-2"
                               to={`/students/edit/${student.id}`}
                             >
                               <i class="fas fa-edit"></i> Edit
                             </Link>
                             <Link
-                              type="button"
                               className="bg-red-600 hover:bg-red-700 rounded-md p-2"
-                              onClick={removeStudent(student.id)}
+                              onClick={() => removeStudent(student.id)}
                             >
                               <i class="far fa-trash-alt"></i> Delete
                             </Link>
@@ -176,4 +144,6 @@ export default function Students() {
       </div>
     </>
   );
-}
+};
+
+export default Students;

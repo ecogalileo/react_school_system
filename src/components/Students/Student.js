@@ -6,7 +6,6 @@ const Student = () => {
   const [student, setStudent] = useState({
     name: '',
     course: '',
-    major: '',
     email: '',
     address: '',
     image: '',
@@ -14,12 +13,12 @@ const Student = () => {
 
   const { id } = useParams();
   useEffect(() => {
-    loadUser();
+    loadStudent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const loadUser = async () => {
-    const res = await axios.get(`http://localhost:3003/students/${id}`);
-    setStudent(res.data);
+  const loadStudent = async () => {
+    const response = await axios.get(`http://localhost:3003/students/${id}`);
+    setStudent(response.data);
   };
 
   return (

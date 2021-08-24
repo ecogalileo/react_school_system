@@ -9,7 +9,6 @@ const EditStudent = () => {
   const [student, setStudent] = useState({
     name: '',
     course: '',
-    major: '',
     email: '',
     address: '',
     image: '',
@@ -21,19 +20,19 @@ const EditStudent = () => {
   };
 
   useEffect(() => {
-    loadUser();
+    loadStudent();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onSubmit = async e => {
     e.preventDefault();
     await axios.put(`http://localhost:3003/students/${id}`, student);
-    history.push('/');
+    history.push('/students');
   };
 
-  const loadUser = async () => {
-    const result = await axios.get(`http://localhost:3003/students/${id}`);
-    setStudent(result.data);
+  const loadStudent = async () => {
+    const response = await axios.get(`http://localhost:3003/students/${id}`);
+    setStudent(response.data);
   };
 
   return (
