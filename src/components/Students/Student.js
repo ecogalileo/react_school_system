@@ -5,12 +5,8 @@ import axios from 'axios';
 const Student = () => {
   const [student, setStudent] = useState({
     name: '',
-<<<<<<< HEAD
     gradeLevel: '',
     major: '',
-=======
-    course: '',
->>>>>>> master
     email: '',
     address: '',
     image: '',
