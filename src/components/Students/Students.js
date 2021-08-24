@@ -1,43 +1,64 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React from 'react';
-import AdminSidebar from './AdminSidebar';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import AdminSidebar from '../../pages/AdminSidebar';
+import { Link } from 'react-router-dom';
 
-const teacher = [
-  {
-    teacher_name: 'Genesis Gabiola',
-    teacher_department: 'Information Technology (IT)',
-    major: 'Web Development',
-    teacher_address: 'example',
-    teacher_email: 'Genesis@example.com',
-    image:
-      'https://images.unsplash.com/photo-1547320935-59b5a4f2cd1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-  },
+// const students = [
+//   {
+//     name: 'Kimberly Anne Galileo',
+//     course: 'Bachelor of Science Business Administration',
+//     major: 'Major in Financial Management',
+//     Address: 'Dagupan, Pangasinan',
+//     email: 'kimberlyanne@example.com',
+//     image:
+//       'https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.6435-9/186488324_2910688599202923_1355505087170525905_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGixkVIoo2LX5rG2U31zbqQNeyr7C47A0k17KvsLjsDSUKc29thqfbhYKpPOsJuJJ2ohRXzc2gbOHjN34Q0XJVe&_nc_ohc=b2YR7_7jly8AX_NP_hN&_nc_ht=scontent.fmnl17-3.fna&oh=84a703089725753fd4a1de634fc7f41e&oe=614954F9',
+//   },
 
-  {
-    teacher_name: 'Justine Micarandayo',
-    teacher_department: 'Information Technology (IT)',
-    major: 'Software Development',
-    teacher_address: 'example',
-    teacher_email: 'Justine@example.com',
-    image:
-      'https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
-  },
-  // More teacher...
-];
+//   {
+//     name: 'Erick Armstrong Galileo',
+//     course: 'Bachelor of Science Information Technology',
+//     major: 'Major in Web Development',
+//     Address: 'Balungao, Pangasinan',
+//     email: 'ericogalileo@example.com',
+//     image:
+//       'https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.6435-9/141159269_3742680895771114_283658765807445518_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEDnNatwihnejIEB2E5kNznSqi7B5u9vNxKqLsHm7283FDdBI5hiIv5g0JOf0O6hm4vBJj6BaGa-iDCXm7PGPQ0&_nc_ohc=G5xWrPv46hEAX_FTXu8&_nc_ht=scontent.fmnl17-2.fna&oh=b9a37d430fff7f0729701ef6a36a89a8&oe=61489E69',
+//   },
+//   // More student...
+// ];
 
-export default function teacherTable() {
+export default function Students() {
+  const [students, setStudent] = useState([]);
+
+  useEffect(() => {
+    loadStudents();
+  }, []);
+
+  const loadStudents = async () => {
+    console.log('Data loaded');
+    const result = await axios.get('http://localhost:3003/students');
+    setStudent(result.data.reverse());
+  };
+
+  const removeStudent = async id => {
+    await axios.delete(`http://localhost:3003/students/${id}`);
+    loadStudents();
+  };
+
   return (
     <>
-      {/* Sidebar div start */}
       <div className="relative md:flex">
         <AdminSidebar />
         {/* Content Start */}
         <div class="flex-1 p-10 text-2xl font-bold">
           <div className="flex flex-row-reverse">
             {' '}
-            <button class="bg-blue-600 hover:bg-blue-800 rounded-md p-2 mb-8">
-              Add teachers
-            </button>
+            <Link
+              class="bg-blue-600 text-white hover:bg-blue-800 rounded-md p-2 mb-8"
+              to="/students/add"
+            >
+              Add Student
+            </Link>
           </div>
 
           <div className="relative flex flex-col">
@@ -52,13 +73,19 @@ export default function teacherTable() {
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
+                          #
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
                           Name
                         </th>
                         <th
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
-                          Department
+                          Course
                         </th>
                         <th
                           scope="col"
@@ -78,33 +105,31 @@ export default function teacherTable() {
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
-                      {teacher.map(person => (
-                        <tr key={person.teacher_email}>
+                      {students.map((student, idx) => (
+                        <tr key={student.email}>
+                          <th scope="row">{idx + 1}</th>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
                               <div className="flex-shrink-0 h-10 w-10">
                                 <img
                                   className="h-10 w-10 rounded-full"
-                                  src={person.image}
+                                  src={student.image}
                                   alt=""
                                 />
                               </div>
                               <div className="ml-4">
                                 <div className="text-sm font-medium text-gray-900">
-                                  {person.teacher_name}
+                                  {student.name}
                                 </div>
                                 <div className="text-sm text-gray-500">
-                                  {person.teacher_email}
+                                  {student.email}
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm text-gray-900">
-                              {person.teacher_department}
-                            </div>
-                            <div className="text-sm text-gray-500">
-                              {person.major}
+                              {student.course}
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
@@ -113,21 +138,29 @@ export default function teacherTable() {
                             </span>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            {person.teacher_address}
+                            {student.Address}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-white">
-                            <button
+                            <Link
+                              className="bg-blue-600 hover:bg-blue-700 rounded-md mr-4 p-2"
+                              to={`/students/${student.id}`}
+                            >
+                              <i class="fas fa-eye"></i> View
+                            </Link>
+                            <Link
                               type="button"
-                              className="bg-blue-600 hover:bg-blue-800 rounded-md mr-4 p-2"
+                              className="bg-yellow-600 hover:bg-yellow-700 rounded-md mr-4 p-2"
+                              to={`/students/edit/${student.id}`}
                             >
                               <i class="fas fa-edit"></i> Edit
-                            </button>
-                            <button
+                            </Link>
+                            <Link
                               type="button"
-                              className="bg-red-600 hover:bg-red-800 rounded-md p-2"
+                              className="bg-red-600 hover:bg-red-700 rounded-md p-2"
+                              onClick={removeStudent(student.id)}
                             >
                               <i class="far fa-trash-alt"></i> Delete
-                            </button>
+                            </Link>
                           </td>
                         </tr>
                       ))}
@@ -140,7 +173,6 @@ export default function teacherTable() {
           </div>
           {/* Content end */}
         </div>
-        {/* Sidebar div end */}
       </div>
     </>
   );
