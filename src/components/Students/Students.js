@@ -23,6 +23,7 @@ const Students = () => {
 
   return (
     <>
+      {/* Sidebar Start */}
       <div className="relative md:flex">
         <AdminSidebar />
         {/* Content Start */}
@@ -60,13 +61,7 @@ const Students = () => {
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
-                          Course
-                        </th>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                        >
-                          Email
+                          Grade Level
                         </th>
                         <th
                           scope="col"
@@ -89,7 +84,7 @@ const Students = () => {
                                 <img
                                   className="h-10 w-10 rounded-full"
                                   src={student.image}
-                                  alt=""
+                                  alt={`${student.name} Profile`}
                                 />
                               </div>
                               <div className="ml-4">
@@ -104,7 +99,7 @@ const Students = () => {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm text-gray-900">
-                              {student.course}
+                              {student.gradeLevel}
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -133,15 +128,16 @@ const Students = () => {
                         </tr>
                       ))}
                     </tbody>
-                    {/* Table End */}
                   </table>
+                  {/* Table End */}
                 </div>
               </div>
             </div>
           </div>
-          {/* Content end */}
         </div>
+        {/* Content End */}
       </div>
+      {/* Sidebar End */}
     </>
   );
 };

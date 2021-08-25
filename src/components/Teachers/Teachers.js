@@ -4,7 +4,7 @@ import axios from 'axios';
 import AdminSidebar from '../../pages/AdminSidebar';
 import { Link } from 'react-router-dom';
 
-export default function Teachers() {
+const Teachers = () => {
   const [teachers, setTeacher] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Teachers() {
 
   return (
     <>
-      {/* Sidebar div start */}
+      {/* Sidebar Start */}
       <div className="relative md:flex">
         <AdminSidebar />
         {/* Content Start */}
@@ -33,7 +33,7 @@ export default function Teachers() {
               class="bg-blue-600 hover:bg-blue-800 rounded-md px-4 py-2 mb-8 text-white"
               to="/teachers/add"
             >
-              Add teachers
+              Add Teacher
             </Link>
           </div>
 
@@ -47,7 +47,7 @@ export default function Teachers() {
                       <tr>
                         <th
                           scope="col"
-                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider"
                         >
                           #
                         </th>
@@ -61,13 +61,7 @@ export default function Teachers() {
                           scope="col"
                           className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
-                          Department
-                        </th>
-                        <th
-                          scope="col"
-                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                        >
-                          Email
+                          Grade Level
                         </th>
                         <th
                           scope="col"
@@ -82,7 +76,7 @@ export default function Teachers() {
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       {teachers.map((teacher, idx) => (
-                        <tr key={teacher.teacher_email}>
+                        <tr key={teacher.id}>
                           <th scope="row">{idx + 1}</th>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
@@ -90,7 +84,7 @@ export default function Teachers() {
                                 <img
                                   className="h-10 w-10 rounded-full"
                                   src={teacher.image}
-                                  alt=""
+                                  alt={`${teacher.name} Profile`}
                                 />
                               </div>
                               <div className="ml-4">
@@ -105,7 +99,7 @@ export default function Teachers() {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm text-gray-900">
-                              {teacher.department}
+                              {teacher.gradeLevel}
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -119,14 +113,14 @@ export default function Teachers() {
                               <i class="fas fa-eye"></i> View
                             </Link>
                             <Link
-                              className="bg-blue-600 hover:bg-blue-800 rounded-md mr-4 p-2"
+                              className="bg-yellow-600 hover:bg-yellow-700 rounded-md mr-4 p-2"
                               to={`/teachers/edit/${teacher.id}`}
                             >
                               <i class="fas fa-edit"></i> Edit
                             </Link>
                             <Link
-                              className="bg-red-600 hover:bg-red-800 rounded-md p-2"
-                              onClick={removeTeacher(teacher.id)}
+                              className="bg-red-600 hover:bg-red-700 rounded-md p-2"
+                              onClick={() => removeTeacher(teacher.id)}
                             >
                               <i class="far fa-trash-alt"></i> Delete
                             </Link>
@@ -134,16 +128,18 @@ export default function Teachers() {
                         </tr>
                       ))}
                     </tbody>
-                    {/* Table End */}
                   </table>
+                  {/* Table End */}
                 </div>
               </div>
             </div>
           </div>
-          {/* Content end */}
         </div>
-        {/* Sidebar div end */}
+        {/* Content End */}
       </div>
+      {/* Sidebar End */}
     </>
   );
-}
+};
+
+export default Teachers;

@@ -1,9 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useHistory } from 'react-router-dom';
-// import { Redirect } from 'react-router-dom'
-// import RegistrationOutput from './RegistrationOutput'
+import { useHistory } from 'react-router-dom';
 
 const retrieveData = localStorage.getItem('studentData')
   ? JSON.parse(localStorage.getItem('studentData'))
@@ -15,18 +13,19 @@ const RegistrationForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors }, reset
+    formState: { errors },
+    reset,
   } = useForm();
   const onSubmit = e => {
     setData(e);
     setallData([...allData, e]);
     console.log(e, data);
-    history.push('/register/accept')
+    history.push('/register/accept');
     // reset();
   };
   const clear = () => {
-      reset();
-  }
+    reset();
+  };
   const history = useHistory();
   useEffect(() => {
     localStorage.setItem('studentData', JSON.stringify(allData));
@@ -86,145 +85,150 @@ const RegistrationForm = () => {
           </div>
         </div>
         <div className="md:grid md:grid-cols-3 gap-2">
-                  {/* Birth Date */}
-        <div className="col-span-2">
-        <label className="px-7 text-xl font-medium ">Birth Date</label>
-        <div className="flex px-6 lg:px-0 lg:pl-7 mb-6 ">
-          <div className="flex flex-col w-full">
-            <label className="m-1">
-              Month <span className="text-red-500">*</span>
-            </label>
-            <select
-              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
-              {...register('birthMonth', { required: 'Please select Month' })}
-            >
-              <option></option>
-              <option>January</option>
-              <option>February</option>
-              <option>March</option>
-              <option>April</option>
-              <option>May</option>
-              <option>June</option>
-              <option>July</option>
-              <option>August</option>
-              <option>September</option>
-              <option>October</option>
-              <option>November</option>
-              <option>December</option>
-            </select>
-            {errors.birthMonth && (
-              <p className="text-xs pl-1 text-red-500">
-                {errors.birthMonth.message}
-              </p>
-            )}
-          </div>
-          <div className="flex flex-col w-full ml-2">
-            <label className="m-1">
-              Day <span className="text-red-500">*</span>
-            </label>
-            <select
-              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
-              {...register('birthDay', { required: 'Please select Day' })}
-            >
-              <option></option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-              <option>16</option>
-              <option>17</option>
-              <option>18</option>
-              <option>19</option>
-              <option>20</option>
-              <option>21</option>
-              <option>22</option>
-              <option>23</option>
-              <option>24</option>
-              <option>25</option>
-              <option>26</option>
-              <option>27</option>
-              <option>28</option>
-              <option>29</option>
-              <option>30</option>
-              <option>31</option>
-            </select>
-            {errors.birthDay && (
-              <p className="text-xs pl-1 text-red-500">
-                {errors.birthDay.message}
-              </p>
-            )}
-          </div>
-          <div className="flex flex-col w-full ml-2">
-            <label className="m-1">
-              Year <span className="text-red-500">*</span>
-            </label>
-            <select
-              className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
-              {...register('birthYear', { required: 'Please select Year' })}
-            >
-              <option></option>
-              <option>2017</option>
-              <option>2016</option>
-              <option>2015</option>
-              <option>2014</option>
-              <option>2013</option>
-              <option>2012</option>
-              <option>2011</option>
-              <option>2010</option>
-              <option>2009</option>
-              <option>2008</option>
-              <option>2007</option>
-              <option>2006</option>
-              <option>2005</option>
-              <option>2004</option>
-              <option>2003</option>
-              <option>2002</option>
-              <option>2001</option>
-              <option>2000</option>
-            </select>
-            {errors.birthYear && (
-              <p className="text-xs pl-1 text-red-500">
-                {errors.birthYear.message}
-              </p>
-            )}
-          </div>
-        </div>
-        </div>
-        {/* Gender */}
-        <div className='col-span-1'>
-            <label className="px-8 md:pr-7 md:px-0 text-xl font-medium ">Gender</label>
-                <div className="px-7 md:pr-7 md:px-0 mb-6 ">
-                <div className="flex flex-col w-full">
-                    <label className="m-1">Gender <span className="text-red-500">*</span>
-            </label>
-                    <select
-                    className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
-                    {...register('gender', { required: 'This is required' })}
-                    >
-                    <option></option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>N/A</option>
-                    </select>
-                    {errors.gender && (
-                    <p className="text-xs pl-1 text-red-500">
-                        {errors.gender.message}
-                    </p>
-                    )}
-                </div>
-                </div>
+          {/* Birth Date */}
+          <div className="col-span-2">
+            <label className="px-7 text-xl font-medium ">Birth Date</label>
+            <div className="flex px-6 lg:px-0 lg:pl-7 mb-6 ">
+              <div className="flex flex-col w-full">
+                <label className="m-1">
+                  Month <span className="text-red-500">*</span>
+                </label>
+                <select
+                  className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
+                  {...register('birthMonth', {
+                    required: 'Please select Month',
+                  })}
+                >
+                  <option></option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+                </select>
+                {errors.birthMonth && (
+                  <p className="text-xs pl-1 text-red-500">
+                    {errors.birthMonth.message}
+                  </p>
+                )}
+              </div>
+              <div className="flex flex-col w-full ml-2">
+                <label className="m-1">
+                  Day <span className="text-red-500">*</span>
+                </label>
+                <select
+                  className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
+                  {...register('birthDay', { required: 'Please select Day' })}
+                >
+                  <option></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                  <option>24</option>
+                  <option>25</option>
+                  <option>26</option>
+                  <option>27</option>
+                  <option>28</option>
+                  <option>29</option>
+                  <option>30</option>
+                  <option>31</option>
+                </select>
+                {errors.birthDay && (
+                  <p className="text-xs pl-1 text-red-500">
+                    {errors.birthDay.message}
+                  </p>
+                )}
+              </div>
+              <div className="flex flex-col w-full ml-2">
+                <label className="m-1">
+                  Year <span className="text-red-500">*</span>
+                </label>
+                <select
+                  className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
+                  {...register('birthYear', { required: 'Please select Year' })}
+                >
+                  <option></option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                  <option>2009</option>
+                  <option>2008</option>
+                  <option>2007</option>
+                  <option>2006</option>
+                  <option>2005</option>
+                  <option>2004</option>
+                  <option>2003</option>
+                  <option>2002</option>
+                  <option>2001</option>
+                  <option>2000</option>
+                </select>
+                {errors.birthYear && (
+                  <p className="text-xs pl-1 text-red-500">
+                    {errors.birthYear.message}
+                  </p>
+                )}
+              </div>
             </div>
+          </div>
+          {/* Gender */}
+          <div className="col-span-1">
+            <label className="px-8 md:pr-7 md:px-0 text-xl font-medium ">
+              Gender
+            </label>
+            <div className="px-7 md:pr-7 md:px-0 mb-6 ">
+              <div className="flex flex-col w-full">
+                <label className="m-1">
+                  Gender <span className="text-red-500">*</span>
+                </label>
+                <select
+                  className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 appearance-none border border-gray-300"
+                  {...register('gender', { required: 'This is required' })}
+                >
+                  <option></option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>N/A</option>
+                </select>
+                {errors.gender && (
+                  <p className="text-xs pl-1 text-red-500">
+                    {errors.gender.message}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
         {/* Address */}
         <label className="px-8 text-xl font-medium ">Address</label>
@@ -396,9 +400,7 @@ const RegistrationForm = () => {
           </div>
         </div>
         {/* More Information */}
-        <label className="px-8 text-xl font-medium">
-          More Information
-        </label>
+        <label className="px-8 text-xl font-medium">More Information</label>
         <div className="px-7 grid md:grid-cols-2">
           <div className="flex flex-col w-full md:w-8/12">
             <label className="m-1">
@@ -442,15 +444,23 @@ const RegistrationForm = () => {
         </div>
         {/* Buttons */}
         <div className="flex-col md:flex-row px-7 flex pb-7 md:justify-center mt-5">
-            <div className="md:w-3/12 md:mx-3">
-                <button className=" bg-blue-800 hover:bg-blue-600 text-white py-1 px-4 w-full my-3 rounded-md text-center" to="/register/accept" type='submit'>
-                Submit Application
-                </button>
-            </div>
-            <div className="md:w-3/12 md:mx-3">
-            <button className=" bg-red-800 hover:bg-red-600 text-white py-1 px-4 w-full my-3 rounded-md" onClick={clear}>
-                Clear</button>
-            </div>
+          <div className="md:w-3/12 md:mx-3">
+            <button
+              className=" bg-blue-800 hover:bg-blue-600 text-white py-1 px-4 w-full my-3 rounded-md text-center"
+              to="/register/accept"
+              type="submit"
+            >
+              Submit Application
+            </button>
+          </div>
+          <div className="md:w-3/12 md:mx-3">
+            <button
+              className=" bg-red-800 hover:bg-red-600 text-white py-1 px-4 w-full my-3 rounded-md"
+              onClick={clear}
+            >
+              Clear
+            </button>
+          </div>
         </div>
       </form>
     </div>
