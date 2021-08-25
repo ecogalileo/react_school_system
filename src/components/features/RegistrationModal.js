@@ -58,7 +58,7 @@ const RegistrationModal = () => {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                          Are you sure you want to continue registering the student.
+                          Are you sure you want to continue registering the student?
                         </p>
                       </div>
                     </div>
