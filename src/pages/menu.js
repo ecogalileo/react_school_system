@@ -87,13 +87,13 @@ const Menu = () => {
                       class='flex flex-wrap no-underline hover:no-underline'
                     >
                       <img
-                        src={img_not_available}
+                        src="https://images.squarespace-cdn.com/content/v1/569b4b681c1210c8102de462/1454370992161-5GH53HISHR8ULIREKR2O/image-asset.jpeg?format=1000w"
                         class='h-64 w-full rounded-t pb-6'
                         alt='not available1'
                       />
 
-                      <div class='w-full font-bold text-xl text-gray-900 px-6'>
-                        Lorem ipsum dolor sit amet.
+                      <div class='w-full font-bold text-xl text-gray-900 px-6 pb-3'>
+                        Sports Day Event
                       </div>
                       <p class='text-gray-800 font-serif text-base px-6 mb-5'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -124,13 +124,13 @@ const Menu = () => {
                       class='flex flex-wrap no-underline hover:no-underline'
                     >
                       <img
-                        src={img_not_available}
+                        src="https://sjasarq.files.wordpress.com/2015/08/dsc_1398.jpg"
                         class='h-64 w-full rounded-t pb-6'
                         alt='not available2'
                       />
 
-                      <div class='w-full font-bold text-xl text-gray-900 px-6'>
-                        Lorem ipsum dolor sit amet.
+                      <div class='w-full font-bold text-xl text-gray-900 px-6 pb-3'>
+                        Buwan ng Wika Celebration
                       </div>
                       <p class='text-gray-800 font-serif text-base px-6 mb-5'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -162,15 +162,15 @@ const Menu = () => {
                       class='flex flex-wrap no-underline hover:no-underline'
                     >
                       <img
-                        src={img_not_available}
+                        src="https://lh3.googleusercontent.com/proxy/WPcLAIcs3M_Ew2jZ_sVox0b7u6JxsKLjR8SKyqiIk5xIBJAtv7PTBpWMreSTdW4YkcfbnE-HUtkQ3zwlHIHycipXLRv9ILCaQ_42_NlXTuiW1ebyE8OAf16IFSIQtscm"
                         class='h-64 w-full rounded-t pb-6'
                         alt='not available3'
                       />
 
-                      <div class='w-full  font-bold text-xl text-gray-900 px-6'>
-                        Lorem ipsum dolor sit amet.
+                      <div class='w-full font-bold text-xl text-gray-900 px-6 pb-3'>
+                        Earthquake Drill Exercise
                       </div>
-                      <p class='text-gray-800 font-serif text-base px-6 mb-5'>
+                      <p class='text-gray-800 font-serif text-base px-6 mb-5 text-md'>
                         Lorem ipsum eu nunc commodo posuere et sit amet ligula.{' '}
                         <Link
                           className=' hover:text-gray-500 text-black rounded-full text-md text-center opacity-90'
