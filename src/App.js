@@ -27,6 +27,7 @@ import Teachers from './components/Teachers/Teachers';
 import RegistrationPage from './components/features/RegistrationPage';
 import RegistrationModal from './components/features/RegistrationModal';
 import ListOfStudentApplicants from './components/features/ListOfStudentApplicants';
+import RegistrationSuccess from './components/features/RegistrationSuccess';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           path="/ListOfStudentApplicants"
           component={ListOfStudentApplicants}
         />
+        <Route export path="/register/success" component={RegistrationSuccess}/>
       </Switch>
     </>
   );
