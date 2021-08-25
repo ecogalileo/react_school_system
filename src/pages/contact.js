@@ -83,7 +83,7 @@ const contact = () => {
           </h3>
 
           <p className='text-2xl pt-2 mx-4 hover:text-blue-400 cursor-pointer'>
-            info@feuhighschool.edu.ph
+            info@feuelemschool.edu.ph
           </p>
 
           <hr className='border-2 border-black my-10' />
@@ -92,7 +92,7 @@ const contact = () => {
             <strong className='text-2xl'>ACADEMIC AFFAIRS OFFICE</strong>
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
-            academics@feuhighschool.edu.ph
+            academics@feuelemschool.edu.ph
           </p>
           <br />
 
@@ -100,7 +100,7 @@ const contact = () => {
             <strong className='text-2xl'>FINANCE OFFICE</strong>
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
-            finance@feuhighschool.edu.ph | Mobile: 0956-907-9684 (Globe),
+            finance@feuelemschool.edu.ph | Mobile: 0956-907-9684 (Globe),
             0968-598-4819 (Smart)
           </p>
           <br />
@@ -111,7 +111,7 @@ const contact = () => {
             </strong>
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
-            ftso@feuhighschool.edu.ph
+            ftso@feuelemschool.edu.ph
           </p>
           <br />
 
@@ -120,7 +120,7 @@ const contact = () => {
           </p>
           <p className='hover:text-blue-400 cursor-pointer text-2xl'>
             <Link to='mailto:finance@feuhighschool.edu.ph'></Link>
-            guidance@feuhighschool.edu.ph
+            guidance@feuelemschool.edu.ph
           </p>
           <br />
 
@@ -129,7 +129,7 @@ const contact = () => {
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
             <Link to='mailto:finance@feuhighschool.edu.ph'></Link>
-            hr@feuhighschool.edu.ph
+            hr@feuelemschool.edu.ph
           </p>
           <br />
 
@@ -138,7 +138,7 @@ const contact = () => {
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
             <Link to='mailto:finance@feuhighschool.edu.ph'></Link>
-            library@feuhighschool.edu.ph
+            library@feuelemschool.edu.ph
           </p>
           <br />
 
@@ -149,17 +149,17 @@ const contact = () => {
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
             <Link to='mailto:finance@feuhighschool.edu.ph'></Link>
-            registrar@feuhighschool.edu.ph | Mobile: 0947-474-2710 or
+            registrar@feuelemschool.edu.ph | Mobile: 0947-474-2710 or
             0939-319-5319 (Smart), 0935-524-0814 (TM)
           </p>
 
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
             <Link to='mailto:finance@feuhighschool.edu.ph'></Link>
             <Link to='mailto:registrar@feuhighschool.edu.ph'></Link>
-            scholarships@feuhighschool.edu.ph
+            scholarships@feuelemschool.edu.ph
           </p>
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
-            admissions@feuhighschool.edu.ph
+            admissions@feuelemschool.edu.ph
           </p>
           <br />
 
@@ -168,7 +168,7 @@ const contact = () => {
           </p>
 
           <p className='text-2xl hover:text-blue-400 cursor-pointer'>
-            studentgovernment@feuhighschool.edu.ph
+            studentgovernment@feuelemschool.edu.ph
           </p>
           {/* end of contact us contents */}
         </div>
