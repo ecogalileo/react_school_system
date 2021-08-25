@@ -17,11 +17,11 @@ const About = () => {
           About
         </h1>
       </div>
-      <div class='md:container md:mx-auto'>
+      <div class='md:container md:mx-auto my-40'>
         <h1 className='md:mx-auto lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black bg-green-800 text-white text-center rounded-full py-3 px-6 mt-8 rounded-md opacity-90'>
           <p>MISSION</p>
         </h1>
-        <div className='bg-fixed bg-no-repeat bg-cover bg-yellow-400 bg-bottom h-full flex flex-col justify-center items-center text-center rounded-lg p-8 mb-8 mt-2 mx-auto'>
+        <div className='bg-fixed bg-no-repeat bg-cover bg-yellow-400 bg-bottom h-full flex flex-col justify-center items-center text-center rounded-lg p-8 mb-8 mt-2 mx-auto py-20'>
           <h1 className='lg:text-2xl md:text-2xl sm:text-2xl text-2xl'>
             FEU Elementary School provides quality education that prepares its
             graduates for the world of work, for college, and for life. Its
@@ -30,10 +30,10 @@ const About = () => {
             its learning activities are project-based.
           </h1>
         </div>
-        <h1 className='md:mx-auto lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black bg-green-800 text-white text-center rounded-full py-3 px-6 mt-8 rounded-md opacity-90'>
+        <h1 className='md:mx-auto lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black bg-green-800 text-white text-center rounded-full py-3 px-6 mt-8 rounded-md opacity-90 mt-24'>
           <p>VISION</p>
         </h1>
-        <div className='bg-fixed bg-no-repeat bg-cover bg-yellow-400 bg-bottom h-full flex flex-col justify-center items-center text-center rounded-lg p-8 mb-8 mt-2 mx-auto'>
+        <div className='bg-fixed bg-no-repeat bg-cover bg-yellow-400 py-20 bg-bottom h-full flex flex-col justify-center items-center text-center rounded-lg p-8 mb-8 mt-2 mx-auto'>
           <h1 className='lg:text-2xl md:text-2xl sm:text-2xl text-2xl'>
             FEU Elementary School graduates flourish in high-school and lead
             meaningful and rewarding lives. They are critical thinkers, good
