@@ -3,7 +3,6 @@ import HomeNavbar from '../components/HomeNavbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import flipped_classroom from '../images/flipped_classroom.png';
-import img_not_available from '../images/img_not_available.jpg';
 
 const Menu = () => {
   return (
@@ -87,7 +86,7 @@ const Menu = () => {
                       class='flex flex-wrap no-underline hover:no-underline'
                     >
                       <img
-                        src="https://images.squarespace-cdn.com/content/v1/569b4b681c1210c8102de462/1454370992161-5GH53HISHR8ULIREKR2O/image-asset.jpeg?format=1000w"
+                        src='https://images.squarespace-cdn.com/content/v1/569b4b681c1210c8102de462/1454370992161-5GH53HISHR8ULIREKR2O/image-asset.jpeg?format=1000w'
                         class='h-64 w-full rounded-t pb-6'
                         alt='not available1'
                       />
@@ -124,7 +123,7 @@ const Menu = () => {
                       class='flex flex-wrap no-underline hover:no-underline'
                     >
                       <img
-                        src="https://sjasarq.files.wordpress.com/2015/08/dsc_1398.jpg"
+                        src='https://sjasarq.files.wordpress.com/2015/08/dsc_1398.jpg'
                         class='h-64 w-full rounded-t pb-6'
                         alt='not available2'
                       />
@@ -162,7 +161,7 @@ const Menu = () => {
                       class='flex flex-wrap no-underline hover:no-underline'
                     >
                       <img
-                        src="https://lh3.googleusercontent.com/proxy/WPcLAIcs3M_Ew2jZ_sVox0b7u6JxsKLjR8SKyqiIk5xIBJAtv7PTBpWMreSTdW4YkcfbnE-HUtkQ3zwlHIHycipXLRv9ILCaQ_42_NlXTuiW1ebyE8OAf16IFSIQtscm"
+                        src='https://lh3.googleusercontent.com/proxy/WPcLAIcs3M_Ew2jZ_sVox0b7u6JxsKLjR8SKyqiIk5xIBJAtv7PTBpWMreSTdW4YkcfbnE-HUtkQ3zwlHIHycipXLRv9ILCaQ_42_NlXTuiW1ebyE8OAf16IFSIQtscm'
                         class='h-64 w-full rounded-t pb-6'
                         alt='not available3'
                       />
