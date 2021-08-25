@@ -5,7 +5,7 @@ import flipped_classroom from '../images/flipped_classroom.png';
 
 const Content = () => {
   return (
-    <div className='bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300'>
+    <div className='bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 pb-8'>
       <h1 className='text-7xl mb-8 text-center'>Features</h1>
       <div className='menu-card p-4 border-4 border-yellow-500 md:border-green-500 mb-8'>
         <img

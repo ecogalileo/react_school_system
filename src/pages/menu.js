@@ -19,7 +19,7 @@ const Menu = () => {
         </h1>
       </div>
 
-      <div className='h-full flex flex-col justify-center items-center text-center mb-8 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 p-8 '>
+      <div className='h-full flex flex-col justify-center items-center text-center bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300'>
         <h1 className='lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black mb-14 rounded-lg opacity-90'>
           News
         </h1>
