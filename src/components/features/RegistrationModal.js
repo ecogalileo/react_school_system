@@ -58,7 +58,7 @@ const RegistrationModal = () => {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                          Are you sure you want to continue registering the student.
+                          Are you sure you want to continue registering the student?
                         </p>
                       </div>
                     </div>
@@ -75,7 +75,7 @@ const RegistrationModal = () => {
                   </Link>
                   <Link
                     type="button"
-                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm" to="/"
+                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm" to="/register/success"
                   >
                     Accept
                   </Link>
