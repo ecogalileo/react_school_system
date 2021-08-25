@@ -12,8 +12,8 @@ const Hero = () => {
         FEU ELEMENTARY SCHOOL
       </h1>
       <Link
-        className=' md:py-5 sm:py-5 py-5 md:px-8 sm:px-8 px-8 mt-2 bg-gradient-to-tl from-yellow-200 via-green-200 to-green-500 text-gray-800 rounded-full md:text-4xl hover:bg-green-500 transition duration-300 ease-in-out flex items-center animate-bounce opacity-90'
-        to='/RegistrationPage'
+        className=' md:py-5 sm:py-5 py-5 md:px-8 sm:px-8 px-8 mt-2 bg-green-700 text-yellow-300 rounded-full md:text-4xl hover:bg-green-500 transition duration-300 ease-in-out flex items-center animate-bounce opacity-90'
+        to='/register'
       >
         Enroll Now
       </Link>
