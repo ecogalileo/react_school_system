@@ -8,11 +8,15 @@ const About = () => {
     <>
       <HomeNavbar />
       <div
-        className='bg-fixed bg-no-repeat bg-cover bg-bottom h-full flex flex-col justify-center items-center text-center p-80'
+        className='bg-fixed bg-no-repeat bg-cover bg-bottom h-full flex flex-col justify-center items-center text-center h-96'
         style={{
           backgroundImage: `url(${bg_image})`,
         }}
-      ></div>
+      >
+        <h1 className='lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black mb-48 bg-green-800 text-white p-4 mt-60 rounded-md opacity-90'>
+          About
+        </h1>
+      </div>
       <div class='md:container md:mx-auto'>
         <h1 className='md:mx-auto lg:text-6xl md:text-4xl sm:text-3xl text-3xl font-black bg-green-800 text-white text-center rounded-full py-3 px-6 mt-8 rounded-md opacity-90'>
           <p>MISSION</p>
